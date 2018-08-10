@@ -1,0 +1,33 @@
+
+
+/** \page startup Startup Summary
+
+Updated July 17, 2018 for ROC2.3 and new version, add descriptions about J8 port.
+--------------------------------------
+The following section provides a step-by-step summary to run the Zephyr/instrument communication simulator with the ROC. Sections refer to the document OBCZ_simulator_User_Manual.pdf
+
+Abbreviations: 
+ROC2: Radio OCcultation, 2nd generation.
+SBC: Single Board Computer,  
+Septentrio: A company manufacturing GPS boards.
+SBF: raw data format of Septentrio GPS boards.
+Rxtools: A software kit from Septentrio used to control/monitor the GPS board status, check and convert SBF data, and do a lot of things.
+RxControl: One software of Rxtools that control/monitor
+Start the ROC instrument:
+IMPORTANT: because of the current power problem with the GPS to ROC connection, connect the power clips to an external power supply set to 3.5 volts. It should draw about ~2 Amps when the power is turned on. The positive red clip should be attached to the second to furthest pin to the right at the ribbon cable connector (ie the only open pin) and the negative black clip to the ground  (pin marked GND near the lower center of the board). Amps goes up to 2.3 when GPS starts tracking satellites.
+
+Connect power to GPS board before powering on the ROC. 
+
+Connect the following cables:
+J1: 	Main GPS antenna
+J2: 	Auxiliary GPS antennas 
+J5:	USB cable (Silicon labs UART serial port shown in device manager) – serial connection from laptop to ROC2 linux board 
+J6: 	USB (Prolific Technology serial port shown in device manager) – serial connection from laptop running RXtools to interior Septentrio Receiver board 
+J4:	serial connection from ROC2 to Zephyr for data communication during flight
+J3: 	Power cable
+J7:	The WIFI antenna
+J8:	(For ROC2.3 and newer): Ethernet cable used to communicate the GPS board and Single Board Computer using Ethernet cable, hubs and switch.
+
+Instrument will start up as soon as power cable J3 is connected. LED on enclosure will light for a short time and then turn off indicating the instrument powered up.
+
+*/
