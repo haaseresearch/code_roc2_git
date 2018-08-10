@@ -94,5 +94,3 @@ $ make
 
 ## License
 See [LICENSE.md](https://github.com/jhaaseyy/code_roc2_git_repository/blob/master/LICENSE) for details
-
-//END
