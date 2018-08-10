@@ -73,6 +73,11 @@ $ git push --set-upstream origin roc2.2_code_20180722_026 //This pushes the comm
 ```
 $ git branch -d <branch_name>
 ```
+### Instructions for Jennifer to review code before commiting
+1. To clone a specific branch to the directory
+```
+git clone --single-branch -b 20180725 https://github.com/haaseresearch/code_roc2_git.git
+```
 
 ## Installation on Hardware
 
