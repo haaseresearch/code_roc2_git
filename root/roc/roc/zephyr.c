@@ -684,6 +684,10 @@ int HandleTMAck(char *msgdata)
 	else return(0);
 }
 
+/** @brief  HandleTC() is responsible for the reading and executing of TC commands
+ *	@param *msgdata pointer to the zephyr TC file containing TC instructions
+ *	@return 0 on error
+ */
 
 int HandleTC(char *msgdata)
 {

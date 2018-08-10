@@ -1,0 +1,29 @@
+
+
+/** \page serial Connecting with Serial
+
+### Connection from windows PC:
+
+Find the COM# port for the J5 connection by checking device manger in Windows PC and find out which one is connected to ‘Silicon Labs CP210x USB to UART Bridge’. If not found see “Install Field Software” section about installing the UART device driver.
+
+Use PuTTY to connect the onboard Linux computer:
+
+This uses the serial port to open a terminal window on the linux computer which will be used to manage the ROC2, and in particular check that sbf data files are being recorded. You cannot transfer the data files via this serial port. Use the wifi for data transfer, described in a later section.
+
+Open PuTTY, in the Logging Session, select ‘Serial’ for ‘Connection type’, type the right COM# for the UART com port in the ‘Serial line’, and input 115200 for ‘Speed’. Choose Connection type ‘Serial’ to check details. Save session to ‘black_serial_pc_2_roc2_linux_board’(or name of your own choice, but good to show the equipment and PC type) for future use. Click Open.
+
+Ethernet Connections (For ROC 2.3 and newer version): 
+Use provided Ethernet cables, combiner and switch to connect the ROC2.3 with PC. J8(8 pin)-1 Ethernet Cable -> Ethernet Combiner -> 2 Ethernet Cables -> Ethernet Switch -> 1 Ethernet Cable -> PC.
+
+### Connection from Mac:
+
+Open Zterm program 
+Click Menu => connection > 
+Service Name: mac2roc2 (or your choice)
+Data Rate 115200; Data Bits 8;  Parity None; Stop Bits 1;
+Flow Control: Xon/Xoff
+
+
+*/
+
+
