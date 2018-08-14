@@ -1,30 +1,40 @@
+
 /**
- * \example roc2.h
- * \example zephyr.h
- * \example roc2.c
- * \example zephyr.c
+ * @defgroup   roc2_header roc2.h
+ *
+ * @brief header file for the initial ROC2 data collection software
  */
 
 /**
- * @defgroup   ROC ROC.C
+ * @defgroup   roc2_code roc2.c
  *
- * @brief handles gps data collection and internal housekeeping of the ROC Module
+ * @brief This program is the first version of data collection software for the ROC2 Radio
+ *	Occultation Instrument. It lacks the full feature set of the final instrument but
+ *	performs the following:
+ *	
+ *	- Reads configuration file to determine commands for setting up GPS receiver
+ *	- Configures GPS receiver
+ *	- Launch data offload program
+ *	- Logs data received from GPS receiver to files
+ *	- When data file is closed, calls data processing script and open new file
  */
 
 /**
- * @defgroup   ZEPHYR ZEPHYR.C
+ * @defgroup   zephyr_header zephyr.h
  *
- * @brief handles communication between ROC and Zephyr Modules
+ * @brief header file for the initial ROC2 Zephyr interface module
  */
 
 /**
- * @defgroup   ROC ROC.H
+ * @defgroup   zephyr_code zephyr.c
  *
- * @brief handles communication between ROC and Zephyr Modules
- */
-
- /**
- * @defgroup   ZEPHYR ZEPHYR.H
- *
- * @brief handles communication between ROC and Zephyr Modules
+ * @brief This program is the first version of data collection software for the ROC2 Radio
+ *	Occultation Instrument. It lacks the full feature set of the final instrument but
+ *	performs the following:
+ *	
+ *	- Reads configuration file to determine commands for setting up GPS receiver
+ *	- Configures GPS receiver
+ *	- Launch data offload program
+ *	- Logs data received from GPS receiver to files
+ *	- When data file is closed, calls data processing script and open new file
  */

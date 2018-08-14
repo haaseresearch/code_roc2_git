@@ -7,8 +7,7 @@ var NAVTREE =
       [ "Making Ethernet Connection", "ethernet.html", null ],
       [ "Making WIFI Connection", "wifi.html", null ]
     ] ],
-    [ "Function APIs", "modules.html", "modules" ],
-    [ "Source Codes", "examples.html", "examples" ],
+    [ "Source Code", "modules.html", "modules" ],
     [ "GitHub", "^https://github.com/haaseresearch/code_roc2_git", null ],
     [ "Issue Tracker", "^https://github.com/haaseresearch/code_roc2_git/issues", null ]
   ] ]
@@ -16,7 +15,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"ethernet.html"
+"ethernet.html",
+"group__zephyr__header.html#ga5d4e9da7ecf27d35f3194989053adee0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

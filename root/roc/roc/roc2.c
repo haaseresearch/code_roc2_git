@@ -13,6 +13,9 @@
  *	- When data file is closed, calls data processing script and open new file
  *	
  *	@author David Jabson, Brainstorm Engineering 2018 
+ *
+ *	@addtogroup roc2_code
+ *	@{
  */
 
 #include <stdio.h>

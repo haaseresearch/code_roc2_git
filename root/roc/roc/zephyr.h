@@ -3,6 +3,8 @@
  *	@brief header file for the initial ROC2 Zephyr interface module
  *	@author David Jabson, Brainstorm Engineering 2018
  *	
+ *	@addtogroup zephyr_header
+ *	@{
  */
 
 #ifndef __ZEPHYR__
