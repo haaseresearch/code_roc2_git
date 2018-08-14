@@ -696,7 +696,7 @@ int HandleTMAck(char *msgdata)
  *	4. HandleTC() compares the command to the list and executes it
  *	5. HandleTC() copies linux terminal output to file under /queue, which is automatically sent back to Zephyr Module
  *	
- *	@param *msgdata pointer to the zephyr TC file containing TC instructions
+ *	@param *msgdata pointer to the zephyr TC instructions
  *	@return 0 on error
  */
 
