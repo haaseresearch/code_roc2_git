@@ -1,4 +1,8 @@
-﻿/// \copyright 2017 David Jabson, Brainstorm Engineering
+﻿/**
+ *	@file roc2.c
+ */
+
+/// \copyright 2017 David Jabson, Brainstorm Engineering
 ///
 /// \file roc.c
 /// \brief ROC2 Initial Data Collection Program

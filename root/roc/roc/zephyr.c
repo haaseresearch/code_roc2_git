@@ -1,4 +1,8 @@
-﻿/// \copyright 2018 David Jabson, Brainstorm Engineering
+﻿/**
+ *	@file zephyr.c
+ */
+
+/// \copyright 2018 David Jabson, Brainstorm Engineering
 ///
 /// \file zephyr.c
 /// \brief ROC2 Zephyr Interface Module
@@ -684,7 +688,14 @@ int HandleTMAck(char *msgdata)
 	else return(0);
 }
 
-/** @brief  HandleTC() is responsible for the reading and executing of TC commands
+/** @brief  HandleTC() reads the TC commands and returns a terminal echo of the response
+ *	
+ *	1. To carry out a telecommand (TC), user types in the linux command in 'cmd' under /root/LV/TC_Files. Note: Only one file can exist here at a time
+ *	2. Zephyr wraps cmd in standard XML format and sends to ROC
+ *	3. HandleTC() decipher XML format and reads the linux command
+ *	4. HandleTC() compares the command to the list and executes it
+ *	5. HandleTC() copies linux terminal output to file under /queue, which is automatically sent back to Zephyr Module
+ *	
  *	@param *msgdata pointer to the zephyr TC file containing TC instructions
  *	@return 0 on error
  */
