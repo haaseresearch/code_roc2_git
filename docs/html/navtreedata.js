@@ -7,8 +7,8 @@ var NAVTREE =
       [ "Making Ethernet Connection", "ethernet.html", null ],
       [ "Making WIFI Connection", "wifi.html", null ]
     ] ],
-    [ "API Modules", "modules.html", "modules" ],
-    [ "Examples", "examples.html", "examples" ],
+    [ "Function APIs", "modules.html", "modules" ],
+    [ "Source Codes", "examples.html", "examples" ],
     [ "GitHub", "^https://github.com/haaseresearch/code_roc2_git", null ],
     [ "Issue Tracker", "^https://github.com/haaseresearch/code_roc2_git/issues", null ]
   ] ]

@@ -1,4 +1,8 @@
-﻿/// \copyright 2017 David Jabson, Brainstorm Engineering
+﻿/**
+ *	@file zephyr.h
+ */
+
+/// \copyright 2017 David Jabson, Brainstorm Engineering
 ///
 /// \file zephyr.h
 /// \brief Header file for the initial ROC2 Zephyr interface module.
