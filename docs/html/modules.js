@@ -1,5 +1,7 @@
 var modules =
 [
-    [ "ROC.C", "group___r_o_c.html", null ],
-    [ "ZEPHYR.C", "group___z_e_p_h_y_r.html", null ]
+    [ "roc2.h", "group__roc2__header.html", "group__roc2__header" ],
+    [ "roc2.c", "group__roc2__code.html", "group__roc2__code" ],
+    [ "zephyr.h", "group__zephyr__header.html", "group__zephyr__header" ],
+    [ "zephyr.c", "group__zephyr__code.html", "group__zephyr__code" ]
 ];

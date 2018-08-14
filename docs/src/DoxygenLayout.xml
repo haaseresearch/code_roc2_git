@@ -13,7 +13,7 @@
       <tab type="user" url="@ref wifi" title="Making WIFI Connection"/>
     </tab>
 
-    <tab type="modules" visible="yes" title="Function APIs" intro=""/>
+    <tab type="modules" visible="yes" title="Source Code" intro=""/>
 
 <!--     <tab type="namespaces" visible="yes" title="">
       <tab type="namespacelist" visible="yes" title="" intro=""/>
@@ -32,7 +32,7 @@
       <tab type="globals" visible="yes" title="" intro=""/>
     </tab> -->
 
-    <tab type="examples" visible="yes" title="Source Codes" intro=""/> -->
+<!--    <tab type="examples" visible="yes" title="Source Codes" intro=""/> -->
 
     <tab type="user" url="https://github.com/haaseresearch/code_roc2_git" title="GitHub"/>
     <tab type="user" url="https://github.com/haaseresearch/code_roc2_git/issues" title="Issue Tracker"/>
