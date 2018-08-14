@@ -32,7 +32,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Strateole 2 Project
    </div>
-   <div id="projectbrief">ScrippsInstituteofOceanography@UCSanDiego</div>
+   <div id="projectbrief">Scripps_Institute_of_Oceanography_@_UC_San_Diego</div>
   </td>
  </tr>
  </tbody>
