@@ -1,22 +1,19 @@
 ﻿/**
  *	@file zephyr.c
+ *	@brief ROC2 Zephyr Interface Module
+ *	
+ *	This program is the first version of data collection software for the ROC2 Radio
+ *	Occultation Instrument. It lacks the full feature set of the final instrument but
+ *	performs the following:
+ *	
+ *	- Reads configuration file to determine commands for setting up GPS receiver
+ *	- Configures GPS receiver
+ *	- Launch data offload program
+ *	- Logs data received from GPS receiver to files
+ *	- When data file is closed, calls data processing script and open new file
+ *	
+ *	@author David Jabson, Brainstorm Engineering 2018 
  */
-
-/// \copyright 2018 David Jabson, Brainstorm Engineering
-///
-/// \file zephyr.c
-/// \brief ROC2 Zephyr Interface Module
-///
-/// This program is the first version of data collection software for the ROC2 Radio
-///   Occultation Instrument. It lacks the full feature set of the final instrument but
-///   performs the following:
-///
-///   - Reads configuration file to determine commands for setting up GPS receiver
-///   - Configures GPS receiver
-///   - Launch data offload program
-///   - Logs data received from GPS receiver to files
-///   - When data file is closed, calls data processing script and open new file
-///
 
 #include <stdio.h>
 #include <stdlib.h>

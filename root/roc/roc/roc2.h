@@ -1,12 +1,10 @@
 /**
  *	@file roc2.h
+ *	@brief header file for the initial ROC2 data collection software
+ *	@author David Jabson, Brainstorm Engineering 2018
+ *	
  */
-
-/// \copyright 2017 David Jabson, Brainstorm Engineering
-///
-/// \file roc.h
-/// \brief Header file for the initial ROC2 data collection software.
-///    
+  
 
 #ifndef __ROC__
 #define __ROC__
