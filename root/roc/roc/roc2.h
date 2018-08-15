@@ -1,11 +1,10 @@
 /**
- *	@file roc2.h
- *	@brief header file for the initial ROC2 data collection software
- *	@author David Jabson, Brainstorm Engineering 2018
- *	
- *	@addtogroup roc2_header
- *	@{
- *
+ * @file roc2.h
+ * @brief header file for the initial ROC2 data collection software
+ * @author David Jabson, Brainstorm Engineering 2018
+ * 
+ * @addtogroup roc2_header
+ * @{
  */
   
 
