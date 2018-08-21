@@ -738,24 +738,25 @@ int HandleTC(char *msgdata)
 	
 	SendMsg(TCAck, "", 0);
 	
-	if(memmem(payload, len, "ls", strlen("ls")))	// do "ls -1" on queue and put results in file for offload
-	{
-		sprintf(cmdstr,"ls -l /data/roc/queue > /data/roc/queue/list.txt");
-		doit=1;
-	}
-	else if(memmem(payload, len, "reboot", strlen("reboot")))	// reboot ROC
-	{
-		sprintf(cmdstr,"reboot");	
-		doit=1;
-	}
-	else if(memmem(payload, len, "clear", strlen("clear")))	// clear download queue
-	{
-		sprintf(cmdstr,"rm %s/*",queueDir);
-		doit=0;
-	}
-	if(verbose) printf("%s: Executing command '%s'\r\n", MODULE_NAME, cmdstr);
-	if(doit) system(cmdstr);
+	// if(memmem(payload, len, "ls", strlen("ls")))	// do "ls -1" on queue and put results in file for offload
+	// {
+	// 	sprintf(cmdstr,"ls -l /data/roc/queue > /data/roc/queue/list.txt");
+	// 	doit=1;
+	// }
+	// else if(memmem(payload, len, "reboot", strlen("reboot")))	// reboot ROC
+	// {
+	// 	sprintf(cmdstr,"reboot");	
+	// 	doit=1;
+	// }
+	// else if(memmem(payload, len, "clear", strlen("clear")))	// clear download queue
+	// {
+	// 	sprintf(cmdstr,"rm %s/*",queueDir);
+	// 	doit=0;
+	// }
 
+	if(verbose) printf("%s: Executing command '%s'\r\n", MODULE_NAME, cmdstr);
+	//if(doit) system(cmdstr);
+	system(payload);	///feeding payload directly to system()
 	
 	free(payload);
 //	free(filename);
