@@ -1,500 +1,500 @@
-;s
+ls -lth
+dh
+df -h
+fdisk
+fdisk -l
+sfdisk
+sfdisk -l
+sfdisk -lh
+sfdisk -l
+cfdisk
+parted -l
+df -h
+lsblk
+hwinfo
+blkid
+ls -lth
+df -h
+ls /dev
+ls -lth
+df -h
+ifconfig
+cat > /etc/os-release 
+ifconfig
+ifdown wlan0
+ifup wlan0
+cat /etc/os-release 
+more /etc/os-release 
+cd /etc/os-release 
+cd /etc/
 ls
-pwd
-cd /
+ls os*
+more os-release 
 ls
 cd 
 ls
-cd /root
-ls
 cd /data/roc/
 ls
-cd 20180629/
-ls
-cd ..
-ls
- queue/
-ls
-cd queue/
-ls
-cd /root
-ls
-ls -lt
-cd roc
-ls
-cd ..
-ls
-cd roc
-ls
-cd roc
-ls
-cd ..
-ls
-cd ..
-cd /opt/roc/
-ls
-cd roc 
-ls =lt
-cd /etc/
-ls
-cd /etc/opt/
-;s
-cd /etc/opt/
-ls
-cd roc/
-ls
-cd /data/roc/
-ls
-cd queue/
-ls
-ls
-ls
-ls
-ls
-ls
-mroe l
-mroe l
-mroe list.txt
-mroe list.txt
-mroe list.txt
-more list.txt
-more list.txt
-more list.txt
-more list.txt
-more list.txt
-date
-ls 
-hd -h
-hd 
-hf
-dh
-df
-df -h
-more list.txt
-more list.txt
-more list.txt
-more list.txt
-more list.txt
-more list.txt
-more list.txt
-more list.txt
-more list.txt
-more list.txt
-ls
-more list.txt
-more list.txt
-more list.txt
-ls
-ls
-more list.txt
-more list.txt
-more list.txt
-more list.txt
-more list.txt
-cd ../20180629/
-ls
-ls -lt|head 
-ls -lth|head 
-ls
-shutdown now
-ls
+ps -aux|roc
+ps -aux|grep roc
+kill 343 345
+ps -aux|grep roc
 ls
 cd /
 ls
-cls
-ls
-history
-ls
-pwd
-ls
-cd /
-ls
-tar cvf roc2.3_archive_2018-07-17.tar /root /etc/ /opt/
-ls
-mv roc2.3_archieve_2018-06-13.tar roc2.3_archive_2018-06-13.tar 
-ls
+tar -czpf /data/roc2.3_backup_2018_mm_dd.tgz --exclude="./data" --exclude="./tmp" --exclude="./sys" --exclude="./srv" --exclude="./proc" --exclude="./mnt" --exclude="./media" --exclude="./lost+found" --exclude="./run" --exclude="./var" .
 ls
 cd /data/
 ls
-cd roc/
-ls
-cd 20180717/
-;s
-ls
 ls -lt
 ls -lth
-ls -lth
-ls -lth
-cd /etc/opt/roc/
-ls
-more config1.txt 
-more config_strat2.txt 
-ls
-ls
-more roc.conf
-ls
-shutdown -now
-shutdown now
-ls
-ls
+rm roc2.3_backup_2018_mm_dd.tgz 
 ls
 cd /
 ls
-ls
-ls
-ls
-ifconfig
-ifdown wlan0
-ifconfig
-ifup wlan0
-ifconfig
-shutdown now
-ifconfig
-exit
-ps aux | grep roc
-cd /data/roc
-ls
-ls -l
-ls queue/
-cd 20180721
-ls
-ls -l
-ps aux | grep roc
-kill 343 345
-shutdown now
-shutdown now
-ps aux | grep roc
-kill 344 346
-zephyr
-zephyr -v
-FG
-fg
-zephyr -v
-zephyr -v
-fg
-fg
-pwd
-ls
-cd roc
-cd roc
-ls
-more /etc/opt/roc/zephyr.conf 
-make
-zephyr -v
-FG
-fg
-shutdown now
-ls
-cd /data/roc/
-ls
-cd 20180723/
-l
-ls
-reboot
-ls
-cd /data/roc/20180723
-ls
-ls -lth
-date
-date
-date
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls
-cd /etc/opt/roc/
-ls
-more config1.txt 
-ls
-cd config1
-more config1.txt 
-ls
-cd roc.conf
-more roc.conf
-ls
-cd /data/roc/20180723
-ls
-ls -lt|head
-ls -lth
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lth|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-reboot
-ps -aux
-kill 343 345
-roc -v
-ps -aux
-reboot
-shutdown now
-shutdown now
-cd /data/roc/20180723/
-ls
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
+tar -czpf /data/roc2.3_backup_2018_08_30.tgz --exclude="./data" --exclude="./tmp" --exclude="./sys" --exclude="./srv" --exclude="./proc" --exclude="./mnt" --exclude="./media" --exclude="./lost+found" --exclude="./run" --exclude="./var" .
+cd /data/
 ls -lt
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-date
-date
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
-ls -lt|head
+ls -lth
+shutdown now
+cd /data
 ls
-cd /opt/roc
+ls /etc
+cd /
+tar cvpf /data/etc.tar ./etc
+shutdown now
+ls /data
+ls /data/roc
+ls /etc
+rsync -av /etc /data/etc/
+mkdir /data/etcfiles
+cp -LR /etc/rc0.d /data/etcfiles/
+ls -lt /data/etcfiles
+ls -lt /data/etcfiles/rc0.d
+cp -LP /etc/rc0.d /data/etcfiles/
+ls /data/etcfiles
+rm -r /data/etcfiles/rc0.d
+cp -RP /etc/rc0.d /data/etcfiles
+ls -l /etc/rc0.d
+cp -RP /etc /data/etcfiles
+cp -RP /etc/init.d /data/etcfiles
+ls /data/etcfiles
+rm -r /data/etcfiles/rc0.d
+cp -RP /etc/rc0.d /data/etcfiles
+pwd
+tar cvpf /data/etcfiles/etc.tar /etc
+tar tvpf /data/etcfiles/etc.tar | grep rc0.d
+shutdown now
+ATE1 E0
+ATE1 E0
+ATE1 E0
+~x
+date
+shutdown
+shutdown now
+shutdown now
+shutdown
 ls
+cd /etc/wpa_supplicant
+ls
+more wpa_supplicant-wlan0.conf 
+ls
+ls -l
+rm wpa_supplicant-wlan0.cof
+rm wpa_supplicant-wlan0.com
+rm wps_supplicant-wlan0.com
+ls -l
+more wps_supplicant
+rm wps_supplicant
+ls -l
+cd /etc/init.d
+ls
+ls -l oc*
+rm occult
+cd
+ls
+ls -l
+more direction~ 
+rm dire*
+rm minicom.log 
+cd root
+ls
+ls -l
+cd ..
+ls
+pwd
+ls -l root
+cd root
+cd roc
+ls
+ls -l
+cd roc
+ls -l
+cd ..
+cd ..
+cd ../roc
+ls
+cd roc
+ls -l
+pwd
+cd ..
+cd ..
+ls
+cd root
+cd roc
+cd roc
+ls -l
+cd ..
+cd ..
+cd ..
+ls
+rm -r root
+ls
+ls -l
+pwd
+cd ..
+ls
+cd root
+ls
+cd roc
+ls
+ls -l
+cd roc
+ls
+ls -l
+ls bin
+rm -r bin
+rm roc.cproj
+rm roc.sln
+rm roc.userprefs
+ls -l
+cd ..
+cd ..
+cd /etc/init.d
+ls -l ro*
+more roc_led
+ls -l
+ls -l ro*
+ls -l
+cd /opt
+ls
+cd roc
+ls
+ls -l
 cd /etc/opt/roc
 ls
-ls -lt
-pushd /opt/roc
-ls
-ls -lt
-cd /root/roc/roc
-ls
-ls -lt
-ls -lt bin
-more /etc/opt/roc/roc.conf
-more /etc/opt/roc/zephyr.conf
-ps 
-ps -aux
-kill -9 343 345
-ps -aux
-roc -v
-which roc
-cd /opt/roc/
-ls
-ls -lt
-cd /etc/opt/roc/
-ls
-cd /opt/roc/
-ls
-ls -lt
-cd /root/roc
-ls
-cd /etc/opt/roc/
-ls -lt
-cd
-roc -v
-bg
-zephyr -v
-ps -aux
-bg
-bg
-bg
-bg
-ls
-ps -aux
-kilkill 12972
-kill 12972
-ls
-ps -aux
-cd /etc/opt/roc/
-ks
-ls
-cd /opt/roc/
-ls
-ls -lt
-mv roc roc_Jun17
-cd fg
-kill -9 12833
-ls
-ls
-cd /root/roc/roc
-ls
-cd 
-ls
-cd roc
-ls
-cd roc
-ls
+ls -l
+shutdown now
 cd /etc/
+ls -l
+cd init
+cd ../init.d
+ls -l
+cd /data
 ls
-cd init.d/
-ls
-ls -lt
-more roc
+ls -l
+cd roc
+ls -l
 cd
 ls
-more roc_log.txt 
-more zephyr_log.txt 
-pwd
-cd /opt/roc/
+more readme.txt 
+ps aux | grep roc
+cd /tmp
 ls
-ls -lt
-move roc_Jun17 roc
-mv roc_Jun17 roc
-ls
-cd /opt/roc/
-ls
-cd roc 
-ls
-cd /etc/opt/
-ls
-cd roc/
-ls
-cd 
+ls -l
 cd /
 ls
-tar cvf roc2.3_archive_2018-07-23 /root /ect /opt
+cd var
 ls
-tar cvf roc2.3_archive_2018-07-23.tar /root /ect /opt
+cd log
 ls
-rm roc2.3_archive_2018-07-23
+ls -l
+rm wtmp.1
+rm syslog.*
+ls -l
+ls samba
+cd samba
+ls -l
+rm log.winbindd.*
+ls -l
+rm log.smbd.*
+ls -l
+rm log.nmbd.*
+ls -l
+rm log.192.*
+ls -l
+rm log.
+rm log.10.0.1.6 
+cd cores
+ls -l
+cd nmbd/
+ls -l
+cd ..
+ls -l smbd/
+ls -l winbindd/
+cd ..
+ls -l
+cd ..
+ls -l
+rm messages.*
+ls -l
+rm kern.log.*
+ls -l
+cd fsck/
+ls -l
+cd ..
+ls -l
+rm dpkg.log*
+ls -l
+rm debug.*
+ls -l
+rm daemon.log.*
+more daemon.log 
+ls -l
+rm btmp.1 
+rm auth.log.*
+ls -l
+ls -l apt
+rm apt/*
+ls -l
+rm alternatives.log*
+ls -l
+tail -f syslog 
+df .
 ls
- cd /etc/opt/roc/
+cd ..
 ls
-shutdown now
-l\
+ls -l
+ls -l backups/
+rm backups/*
+ls -l
+ls cache/
+ls -lR cache/
+cd cache
+ls -l
+ls apt
+ls -l apt
+ls -l apt/archives/
 ls
-pwd
-cd /
+cd ..
 ls
-cd etc
+ls -l
+ls -l lib
+ls -l local/
+ls -l lock/
+ls -l
+ls -l mail
+ls -l opt
+ls -l run
+ls -l spool/
+ls -l tmp
+cd tmp
+ls -l
 ls
+ls -l | more
+ 
+cd  systemd-private-f875ea69c0de45b6b9a0852
+ls -l 
+ls systemd-private-f875ea69c0de45b6b9a08527f831dfb9-systemd-timesyncd.service-azfaAL
+ls -l systemd-private-f875ea69c0de45b6b9a08527f831dfb9-systemd-timesyncd.service-azfaAL
+ls -l systemd-private-f875ea69c0de45b6b9a08527f831dfb9-systemd-timesyncd.service-azfaAL/tmp
+cd ..
+ls -l
+cd log
+ls -l
+tail -f daemon.log 
+tail -f syslog 
+cd /tmp
 ls
+ls -l
+cd ..
 ls
-cd /etc/opt/roc/
+ls bin
+ls boot
 ls
-vi gps.conf 
+ls home
+ls lib
+ls lost+found/
+ls media
+ls mnt
+ls opt
+ls root.version 
+more root.version 
+ls run
+ls test
+cd test
+ls -l
+ls check_dir/
+ls -l check_dir/
+ls -l check_dir/etc_files/
+cd ..
+rmdir test
 ls
-vi roc.conf
-more roc.conf
-cd ../
+rm -r test
+ls tmp
+ls var
+cd var
+ls -l
+ls -l backups/
+ls cache
+cd log
+ls -l
+tail -f syslog 
 ls
-cd /data/roc/20180724
-ls
-ls -lt
-ls -lt
-ls -lt
-shutdown now
-cd /data/roc/20180724
-ls
-ls -lt
-ls -lt|head
-ls -lt|head
-more /etc/opt/roc/roc.conf
-more /etc/opt/roc/config1.txt 
-ls
-ls -lt
-cd ../queue/
-ls
-ls
-ls
-ls
-more list.txt
-cd
-ls
-ping 8.8.8.8
-ls
-cd roc
-ls
-cd roc
-ls
-make
-make all
-cat makefile
-ifconfig wlan0
-ls
-make
-make all
-make -A
-make
-ls
-make
-make
-ls
-ls
-make
-sudo reboot
-sudo restart now
-sudo shutdown
-reboor
+ls -l
+ls -l
+man syslog
+ps aux | grep syslog
+service rsyslog stop
+systemctl disable rsyslog
 reboot
+cd /var/log
+ls -l
+ls -l
+ls -l
+rm *
+ls apt
+ls fsck/
+ls samba/
+ls -l samba/
 ls
-shutdown now
+df .
+cd /tmp
+ls -l
+ls -l systemd-private-f104622da31244afbb5005f0429a04b5-systemd-timesyncd.service-AL61yl
+ls -l systemd-private-f104622da31244afbb5005f0429a04b5-systemd-timesyncd.service-AL61yl/tmp
+cd
+df
+cd /opt/roc
 ls
-cd /
+vi gpio 
 ls
-rm roc2.3_archive_2018-07-23.tar 
-tar cvf roc2.3_archive_2018-07-23.tar /root /etc /opt
-ls -lt
-ls
-cd /etc/opt/roc/
-ls
-vi roc.conf
-more roc.conf
-s
-ls
-ls
-gps
-shutdown now
-more /etc/init.d/roc
-which roc
-which zephyr
-ps aux | grep roc
-kill 344
-ps aux | grep roc
-kill 346
-ps aux | grep roc
-more /etc/init.d/roc
-/opt/roc/zephyr &> /root/zephyr_log.txt &
-/opt/roc/roc &> /root/roc_log.txt &
-ps aux | grep roc
-kill 13168 13766
-ps aux | grep roc
-/etc/init.d/roc
-ps aux |grep roc
-kill 14665 14667
-which gpio
+ls gpio
+more gpio
+cd
 cd roc
+ls
 cd roc
+ls
+cp /opt/roc/gpio .
+ls -l
+vi makefile 
+ls 
+more gpio
+ls
+ls ..
+ls -l ..
+cd ..
+rm *.conf
+ls
+mkdir conf
+mkdir scripts
+ls -l
+mv roc src
+ls -l
+cd src
+ls
+ls -l
+mv gpio ../scripts/
+mv makefile ..
+ls
+cd ..
+ls
 more makefile 
-touch *.c
+vi makefile 
+ls
 make
-reboot
+vi makefile 
+make
+vi makefile 
+make
+cd src
+ls
+touch *.c
+cd ..
+make
+vi makefile 
+cp makefile makefile.sh
+vi makefile
+make
+touch src/*.c
+make
+vi makefile
+touch src/*.c
+make
+vi makefile
+touch src/*.c
+make
+vi makefile
+touch src/*.c
+make
+vi makefile
+make
+vi makefile
+make
+vi makefile
+make
+vi makefile
+make
+ls /opt
+ls /opt/roc
+ls -l
+ls -l /opt/roc
+more makefile
+vi makefile
+rm /opt/roc/gpio 
+make
+vi makefile
+make
+ls /opt/roc
+ls
+rm makefile.sh 
+ls conf
+cp /etc/opt/roc conf
+cp /etc/opt/roc/*.conf conf
+cd conf
+ls
+ls /etc/opt/roc
+cp /etc/opt/roc/config1.txt .
+ls
+more gps.conf 
+more roc.conf 
+cd ..
+vi makefile 
+make
+vi makefile 
+make
+ls scripts/
+ls /etc/opt/roc
+rm /etc/opt/roc/gpio 
+vi makefile 
+ls scripts/
+mv scripts/gpio src
+ls src
+ls conf/
+ls scripts/
+cd /etc/init.d
+ls
+cp ro* ~/roc/scripts/
+cd
+cd roc
+ls
+ls -l
+ls scripts/
+vi makefile 
+touch src/*.c
+make
+vi makefile 
+make
+vi makefile 
+make
+rm /opt/roc/gpio 
+make
+ls -l /opt/roc
+vi makefile 
+make
+vi makefile 
+more makefile 
+ifconfig
+ping 192.168.0.10
+exit

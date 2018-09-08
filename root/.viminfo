@@ -17,9 +17,9 @@
 $
 
 # Command Line History (newest to oldest):
+:q
 :wq
 :q!
-:q
 :w
 :Q!
 :help
@@ -42,42 +42,63 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	#
+"0	LINE	0
+		UPDATE ?= $(shell stty -echo; read -p "Update conf files? " update; stty echo; echo $$update)
 "1	LINE	0
-	eccf,Current,Boot
+	endif
 "2	LINE	0
-	sem,PVT,10
+		echo Not Updating
 "3	LINE	0
-	
+		echo $(UPDATE)
 "4	LINE	0
-	sem,PVT,15
+	else
 "5	LINE	0
-	sem,PVT,15
+		echo Updating
 "6	LINE	0
-	seth,off
+	ifeq ($(UPDATE),Y)
 "7	LINE	0
-	
+	#UPDATE := $(shell stty -echo; read -p "Update conf files? " update; stty echo; echo $$update) 
 "8	LINE	0
-	#iface eth0 inet static
+		echo $(UPDATE)
 "9	LINE	0
 	
 ""-	CHAR	0
-	5
+	#
 
 # File marks:
-'0  14  24  ~/roc/roc/zephyr.h
-'1  11  24  ~/roc/roc/roc2.h
-'2  10  12  /etc/opt/roc/roc.conf
-'3  1  0  /etc/opt/roc/gps.conf
-'4  4  14  /etc/opt/roc/config1.txt
-'5  1  9  /etc/opt/roc/config1.txt
-'6  13  0  /etc/init.d/roc
-'7  70  0  ~/roc/roc/zephyr.c
-'8  8  0  ~/roc
-'9  1  7  /etc/init.d/roc_gpio
+'0  11  0  ~/roc/makefile
+'1  5  0  ~/roc/scripts_init.d/README.txt
+'2  9  1  ~/roc/makefile
+'3  1  0  ~/roc/makefile
+'4  7  78  ~/roc/makefile
+'5  1  0  ~/roc/make
+'6  9  14  ~/roc/makefile
+'7  9  4  ~/roc/makefile
+'8  9  0  ~/roc/makefile
+'9  8  28  ~/roc/makefile
 
 # Jumplist (newest first):
+-'  11  0  ~/roc/makefile
+-'  1  0  ~/roc/makefile
+-'  5  0  ~/roc/scripts_init.d/README.txt
+-'  1  0  ~/roc/scripts_init.d/README.txt
+-'  9  1  ~/roc/makefile
+-'  7  78  ~/roc/makefile
+-'  1  0  ~/roc/make
+-'  8  28  ~/roc/makefile
+-'  25  0  ~/roc/makefile
+-'  5  15  ~/roc/makefile
+-'  39  0  ~/roc/makefile
+-'  30  0  ~/roc/makefile
+-'  27  0  ~/roc/makefile
+-'  17  0  ~/roc/makefile
+-'  14  33  ~/roc/makefile
+-'  6  11  ~/roc/makefile
+-'  35  0  ~/roc/makefile
+-'  20  15  ~/roc/roc/makefile
+-'  1  0  ~/roc/roc/makefile
+-'  1  0  /opt/roc/gpio
+-'  1  20  /test/etc_files/init.d/roc_gpio
 -'  14  24  ~/roc/roc/zephyr.h
 -'  1  0  ~/roc/roc/zephyr.h
 -'  11  24  ~/roc/roc/roc2.h
@@ -119,7 +140,6 @@ $
 -'  4  66  /etc/init.d/roc
 -'  51  0  /etc/init.d/roc_gpio
 -'  73  0  /opt/roc/gpio
--'  1  0  /opt/roc/gpio
 -'  7  22  /etc/network/interfaces
 -'  1  0  /etc/network/interfaces
 -'  3  0  /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
@@ -155,30 +175,140 @@ $
 -'  1  0  ~/occult_rev288_2013-04-29/occult/source/setup.sh
 -'  12  0  ~/occult_rev288_2013-04-29/occult/source/environ.sh
 -'  1  0  ~/occult_rev288_2013-04-29/occult/source/environ.sh
--'  34  38  /etc/init.d/environ.sh
--'  1  0  /etc/init.d/environ.sh
--'  373  0  ~/occult_rev288_2013-04-29/occult/source/GPShandler/coordinate.c
--'  213  0  ~/occult_rev288_2013-04-29/occult/source/GPShandler/coordinate.c
--'  35  0  /etc/init.d/initdevices
--'  1  0  /etc/init.d/initdevices
--'  42  0  /etc/init.d/occult
--'  1  0  /etc/init.d/occult
--'  180  0  ~/occult_rev288_2013-04-29/occult/source/GPShandler/gpsctrl.c
--'  1  0  ~/occult_rev288_2013-04-29/occult/source/GPShandler/gpsctrl.c
--'  79  0  /etc/init.d/initdevices
--'  19  39  ~/occult_rev288_2013-04-29/occult/source/packager/install/mkconfig.sh
--'  1  0  ~/occult_rev288_2013-04-29/occult/source/packager/install/mkconfig.sh
--'  35  5  ~/occult_rev288_2013-04-29/occult/source/packager/install/config_receiver.sh
--'  1  0  ~/occult_rev288_2013-04-29/occult/source/packager/install/config_receiver.sh
--'  26  6  ~/occult_rev288_2013-04-29/occult/source/packager/install/config_receiver.sh
--'  42  0  ~/occult_rev288_2013-04-29/occult/source/GPShandler/gpsInit.c
--'  1  0  ~/occult_rev288_2013-04-29/occult/source/GPShandler/gpsInit.c
--'  20  0  /etc/init.d/initdevices
--'  60  0  ~/occult_rev288_2013-04-29/occult/source/GPShandler/coordinate.c
--'  36  0  /etc/init.d/occult
--'  1  0  ~/occult_rev288_2013-04-29/occult/source/packager/install/modify_system_files.sh
 
 # History of marks within files (newest to oldest):
+
+> ~/roc/makefile
+	"	11	0
+	^	5	23
+	.	11	0
+	+	6	10
+	+	13	17
+	+	14	45
+	+	18	24
+	+	19	19
+	+	22	49
+	+	24	38
+	+	26	20
+	+	29	33
+	+	31	0
+	+	29	46
+	+	31	27
+	+	32	21
+	+	37	0
+	+	35	59
+	+	37	0
+	+	35	55
+	+	37	40
+	+	39	12
+	+	35	0
+	+	4	9
+	+	5	15
+	+	6	11
+	+	14	29
+	+	16	1
+	+	14	30
+	+	16	14
+	+	15	4
+	+	16	0
+	+	16	16
+	+	17	5
+	+	14	0
+	+	15	0
+	+	15	0
+	+	16	0
+	+	17	0
+	+	15	0
+	+	16	0
+	+	20	31
+	+	22	15
+	+	21	3
+	+	27	31
+	+	29	16
+	+	28	3
+	+	14	29
+	+	23	4
+	+	30	4
+	+	33	32
+	+	34	3
+	+	35	17
+	+	36	4
+	+	39	0
+	+	27	0
+	+	28	0
+	+	29	0
+	+	30	0
+	+	27	5
+	+	33	4
+	+	27	0
+	+	28	0
+	+	29	0
+	+	30	0
+	+	5	15
+	+	39	0
+	+	9	15
+	+	3	19
+	+	9	9
+	+	10	24
+	+	39	8
+	+	39	0
+	+	11	21
+	+	39	0
+	+	8	28
+	+	8	0
+	+	9	93
+	+	7	93
+	+	9	0
+	+	7	0
+	+	9	24
+	+	7	91
+	+	9	0
+	+	9	4
+	+	9	14
+	+	9	13
+	+	9	9
+	+	9	17
+	+	9	14
+	+	7	7
+	+	9	17
+	+	7	0
+	+	9	0
+	+	10	0
+	+	11	0
+	+	6	21
+	+	5	22
+	+	10	0
+	+	11	0
+
+> ~/roc/scripts_init.d/README.txt
+	"	5	0
+	^	5	0
+	.	4	64
+	+	4	64
+
+> ~/roc/make
+	"	1	0
+
+> ~/roc/roc/makefile
+	"	20	15
+	^	20	16
+	.	20	15
+	+	3	40
+	+	20	15
+
+> /opt/roc/gpio
+	"	1	0
+	^	65	1
+	.	65	0
+	+	72	0
+	+	61	0
+	+	65	0
+
+> /test/etc_files/init.d/roc_gpio
+	"	1	20
+	^	1	21
+	.	1	20
+	+	1	20
 
 > ~/roc/roc/zephyr.h
 	"	14	24
@@ -307,12 +437,6 @@ $
 	^	4	0
 	.	3	44
 	+	3	44
-
-> /opt/roc/gpio
-	"	73	0
-	^	73	0
-	.	72	0
-	+	72	0
 
 > /etc/network/interfaces
 	"	7	22
