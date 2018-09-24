@@ -1,0 +1,9 @@
+sso,Stream1,COM3,Meas3Ranges,sec60
+sst,G01
+snt,GPSL1CA
+sem,PVT,40
+sem,Tracking,40
+sfm,SingleAnt
+seth,off
+eccf,Current,Boot
+

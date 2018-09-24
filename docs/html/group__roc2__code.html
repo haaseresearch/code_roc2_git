@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Strateole 2 Project: roc2.c</title>
+<title>Strateole 2 Project: Roc2_code</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,18 +73,10 @@ $(document).ready(function(){initNavTree('group__roc2__code.html','');});
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roc2.c</div>  </div>
+<div class="title">Roc2_code</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
-<p>Data collection software for the ROC2 Radio Occultation Instrument. It performs the following: </p>
-<ul>
-<li>Reads configuration file to determine commands for setting up GPS receiver</li>
-<li>Configures GPS receiver</li>
-<li>Launch data offload program</li>
-<li>Logs data received from GPS receiver to files</li>
-<li>When data file is closed, calls data processing script and open new file </li>
-</ul>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -154,6 +146,10 @@ Functions</h2></td></tr>
 <tr class="separator:gac266e79779ea42b506b577821d4a834d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga27c5d4df2dd392e1ef8d20cd90998c26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2__code.html#ga27c5d4df2dd392e1ef8d20cd90998c26">led_blink</a> (int color, int num, int duration)</td></tr>
 <tr class="separator:ga27c5d4df2dd392e1ef8d20cd90998c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d349127ea334bb59b922c6526491064"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2__code.html#ga6d349127ea334bb59b922c6526491064">LogEntry</a> (char *entry)</td></tr>
+<tr class="separator:ga6d349127ea334bb59b922c6526491064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadcbedaa818106b214fa28e4cec06fc2f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2__code.html#gadcbedaa818106b214fa28e4cec06fc2f">SetRocTime</a> (char *rmc)</td></tr>
+<tr class="separator:gadcbedaa818106b214fa28e4cec06fc2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga0ddf1224851353fc92bfbff6f499fa97"></a>
@@ -841,6 +837,42 @@ Functions</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6d349127ea334bb59b922c6526491064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6d349127ea334bb59b922c6526491064">&#9670;&nbsp;</a></span>LogEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LogEntry </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>entry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gadcbedaa818106b214fa28e4cec06fc2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadcbedaa818106b214fa28e4cec06fc2f">&#9670;&nbsp;</a></span>SetRocTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SetRocTime </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>rmc</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -29,5 +29,7 @@ var group__roc2__code =
     [ "set_safe", "group__roc2__code.html#ga7e696bce041fca9cc1924bcd65cbc503", null ],
     [ "led", "group__roc2__code.html#ga94bb341ea8ea68eb26f43e8664513609", null ],
     [ "set_gpio0", "group__roc2__code.html#gac266e79779ea42b506b577821d4a834d", null ],
-    [ "led_blink", "group__roc2__code.html#ga27c5d4df2dd392e1ef8d20cd90998c26", null ]
+    [ "led_blink", "group__roc2__code.html#ga27c5d4df2dd392e1ef8d20cd90998c26", null ],
+    [ "LogEntry", "group__roc2__code.html#ga6d349127ea334bb59b922c6526491064", null ],
+    [ "SetRocTime", "group__roc2__code.html#gadcbedaa818106b214fa28e4cec06fc2f", null ]
 ];

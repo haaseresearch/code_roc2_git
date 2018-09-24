@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Strateole 2 Project: .h roc2_header</title>
+<title>Strateole 2 Project: .c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -76,11 +76,10 @@ $(document).ready(function(){initNavTree('group__roc2.html','');});
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">.h roc2_header</div>  </div>
+<div class="title">.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
-<p>This program is the first version of data collection software for the ROC2 Radio Occultation Instrument. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -89,10 +88,10 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga8e5d9993745ca60b1777be3b1fa57a53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2.html#ga8e5d9993745ca60b1777be3b1fa57a53">SWDate</a>&#160;&#160;&#160;&quot;20180725,2231&quot;</td></tr>
+<tr class="memitem:ga8e5d9993745ca60b1777be3b1fa57a53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2.html#ga8e5d9993745ca60b1777be3b1fa57a53">SWDate</a>&#160;&#160;&#160;&quot;20180917,1053&quot;</td></tr>
 <tr class="memdesc:ga8e5d9993745ca60b1777be3b1fa57a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build date and time.  <a href="#ga8e5d9993745ca60b1777be3b1fa57a53">More...</a><br /></td></tr>
 <tr class="separator:ga8e5d9993745ca60b1777be3b1fa57a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad6f212287232c8a7d12dbc0e5901635d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2.html#gad6f212287232c8a7d12dbc0e5901635d">SWVersion</a>&#160;&#160;&#160;&quot;027&quot;</td></tr>
+<tr class="memitem:gad6f212287232c8a7d12dbc0e5901635d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2.html#gad6f212287232c8a7d12dbc0e5901635d">SWVersion</a>&#160;&#160;&#160;&quot;034&quot;</td></tr>
 <tr class="memdesc:gad6f212287232c8a7d12dbc0e5901635d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Software version number.  <a href="#gad6f212287232c8a7d12dbc0e5901635d">More...</a><br /></td></tr>
 <tr class="separator:gad6f212287232c8a7d12dbc0e5901635d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa8cecfc5c5c054d2875c03e77b7be15d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2.html#gaa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>&#160;&#160;&#160;1</td></tr>
@@ -132,6 +131,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga5d4e9da7ecf27d35f3194989053adee0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2.html#ga5d4e9da7ecf27d35f3194989053adee0">DIR_DEFAULT</a>&#160;&#160;&#160;&quot;/data/roc&quot;</td></tr>
 <tr class="memdesc:ga5d4e9da7ecf27d35f3194989053adee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default location to store data files.  <a href="#ga5d4e9da7ecf27d35f3194989053adee0">More...</a><br /></td></tr>
 <tr class="separator:ga5d4e9da7ecf27d35f3194989053adee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b1da0cb514f35f2dad5f19754377274"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2.html#ga2b1da0cb514f35f2dad5f19754377274">DEBUG_OUTPUT</a>&#160;&#160;&#160;&quot;/data/roc/logs/&quot;</td></tr>
+<tr class="memdesc:ga2b1da0cb514f35f2dad5f19754377274"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default location to store debug logs.  <a href="#ga2b1da0cb514f35f2dad5f19754377274">More...</a><br /></td></tr>
+<tr class="separator:ga2b1da0cb514f35f2dad5f19754377274"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga416de92c0d71270e5d9eb87ba5853e39"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2.html#ga416de92c0d71270e5d9eb87ba5853e39">BCSUCCESS</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memdesc:ga416de92c0d71270e5d9eb87ba5853e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return code for functions that complete successfully.  <a href="#ga416de92c0d71270e5d9eb87ba5853e39">More...</a><br /></td></tr>
 <tr class="separator:ga416de92c0d71270e5d9eb87ba5853e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -288,6 +290,10 @@ Functions</h2></td></tr>
 <tr class="separator:gac266e79779ea42b506b577821d4a834d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga27c5d4df2dd392e1ef8d20cd90998c26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2.html#ga27c5d4df2dd392e1ef8d20cd90998c26">led_blink</a> (int color, int num, int duration)</td></tr>
 <tr class="separator:ga27c5d4df2dd392e1ef8d20cd90998c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d349127ea334bb59b922c6526491064"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2.html#ga6d349127ea334bb59b922c6526491064">LogEntry</a> (char *entry)</td></tr>
+<tr class="separator:ga6d349127ea334bb59b922c6526491064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadcbedaa818106b214fa28e4cec06fc2f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__roc2.html#gadcbedaa818106b214fa28e4cec06fc2f">SetRocTime</a> (char *rmc)</td></tr>
+<tr class="separator:gadcbedaa818106b214fa28e4cec06fc2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -384,14 +390,13 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SWDate&#160;&#160;&#160;&quot;20180725,2231&quot;</td>
+          <td class="memname">#define SWDate&#160;&#160;&#160;&quot;20180917,1053&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Build date and time. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a5">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a9">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gad6f212287232c8a7d12dbc0e5901635d"></a>
@@ -401,14 +406,13 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SWVersion&#160;&#160;&#160;&quot;027&quot;</td>
+          <td class="memname">#define SWVersion&#160;&#160;&#160;&quot;034&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Software version number. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a4">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a8">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaa8cecfc5c5c054d2875c03e77b7be15d"></a>
@@ -422,8 +426,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a37">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a60">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaa93f0eb578d23995850d61f7d61c55c1"></a>
@@ -437,8 +440,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a25">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a59">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gad76d1750a6cdeebd506bfcd6752554d2"></a>
@@ -452,8 +454,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a35">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga29e413f6725b2ba32d165ffaa35b01e5"></a>
@@ -467,8 +468,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a84">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a31">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga8d23feea868a983c8c2b661e1e16972f"></a>
@@ -482,8 +482,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a81">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a7">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gacfbc006ea433ad708fdee3e82996e721"></a>
@@ -497,8 +496,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a82">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a10">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gac5b6e19bf06822021f35602c59658de3"></a>
@@ -512,8 +510,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a83">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a149">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga14ded244c47bbba850a8a4be6d16c7e3"></a>
@@ -527,8 +524,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a3">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a4">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga13011473aa992ebdbad6b99830b54d56"></a>
@@ -544,8 +540,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default serial port baud rate. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a48">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a107">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga22d8a5fa29f522516412a79347c65379"></a>
@@ -561,8 +556,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default serial data bits. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a46">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a105">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gad9fdf5915b4e8cea83af20712b77225c"></a>
@@ -578,8 +572,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default flow control setting. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a47">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a106">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gae315cdbfa1dca5c4f0468fe98782056c"></a>
@@ -595,8 +588,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default line terminator. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a52">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a110">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaa0534241791f23ec8098503582406166"></a>
@@ -612,8 +604,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Size of serial input buffer. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a1">roc2.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf9f22696b250ded78ec1b89ab7629fed"></a>
@@ -629,8 +620,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default length of data files (seconds) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a49">roc2.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga5d4e9da7ecf27d35f3194989053adee0"></a>
@@ -646,8 +636,23 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default location to store data files. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a51">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a109">zephyr.c</a>.</dd>
-</dl>
+
+</div>
+</div>
+<a id="ga2b1da0cb514f35f2dad5f19754377274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b1da0cb514f35f2dad5f19754377274">&#9670;&nbsp;</a></span>DEBUG_OUTPUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBUG_OUTPUT&#160;&#160;&#160;&quot;/data/roc/logs/&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default location to store debug logs. </p>
+
 </div>
 </div>
 <a id="ga416de92c0d71270e5d9eb87ba5853e39"></a>
@@ -663,8 +668,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return code for functions that complete successfully. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a20">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a65">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga92d440cdd980e61a41b9238ca8d8cdc5"></a>
@@ -680,8 +684,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicates general error. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a38">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a96">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga2eaa15a3461739383b0b01463a210558"></a>
@@ -713,8 +716,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicates error reading configuration file. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a29">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a85">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gabcb0530473ae9e0bca89c2c0eb5b8719"></a>
@@ -746,8 +748,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicates error on command line. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a32">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a88">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga3cd32c0121e7225577c4bc3c456c9771"></a>
@@ -763,8 +764,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicates error opening data file. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a69">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a125">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaca80b24a54b1b4247c1ef973ad9a383f"></a>
@@ -940,8 +940,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicates unsupported number of serial data bits. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a55">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a114">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga917385f51ef11c435842e3a175902f42"></a>
@@ -957,8 +956,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Error opening serial port. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a54">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a113">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga95fc7e0c0cea8fdb89d2b22411469b5e"></a>
@@ -974,8 +972,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicates unsupported serial parity. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a56">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a115">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gac5ed0d3199ad199fb8af5fd13af5ed76"></a>
@@ -991,8 +988,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicates unsupported number of serial stop bits. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a57">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a116">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga3cc54957cc0646a3182940f88684be4d"></a>
@@ -1008,8 +1004,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicates unsupported flow control specifier. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a58">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a117">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga883799ad282c86bfe883fe8861adaf21"></a>
@@ -1025,8 +1020,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Error setting serial attributes. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a59">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a118">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gad3d456af166ec90b508baccb123d9af5"></a>
@@ -1074,8 +1068,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>General file error. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a72">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a130">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga0cbbf2187e9b9447943bf91d05d05ba2"></a>
@@ -1155,8 +1148,7 @@ Variables</h2></td></tr>
 
 <p>Main function. </p>
 <p>Calls <a class="el" href="group__roc2.html#gadaf639dd3b74bbc423f3e475d724f5bd" title="Performs module initialization. ">RocInit()</a> to perform initialization then enters the main while loop where it .... the main loop stops, then <a class="el" href="group__roc2.html#ga5e6a6d4fac2c044a42fb2bff853d9718" title="Closes sockets and frees memory. ">RocCleanup()</a> is called before exiting. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a0">roc2.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gadaf639dd3b74bbc423f3e475d724f5bd"></a>
@@ -1203,8 +1195,7 @@ Variables</h2></td></tr>
 <li>BCZMQBINDERROR indicates an error binding the ZMQ REP socket. </li>
 </ul>
 </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a2">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a23">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga5e6a6d4fac2c044a42fb2bff853d9718"></a>
@@ -1226,8 +1217,7 @@ Variables</h2></td></tr>
 <p>Closes sockets and frees memory. </p>
 <p>There will be some serial port clean up stuff in here.</p>
 <dl class="section return"><dt>Returns</dt><dd>Always returns BCSUCCESS </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a22">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a24">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga5dbf303fd2c465b1e724a247623fdbd2"></a>
@@ -1269,8 +1259,7 @@ Variables</h2></td></tr>
 <li>BCERROR if there was an error parsing any of the command line options </li>
 </ul>
 </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a30">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a25">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a71">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga40185ea52d16cecaafae70740e90af29"></a>
@@ -1290,8 +1279,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Prints the usage summary showing valid command line options. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a31">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a26">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a72">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga8ed0e63e6cf78544f92b023037e3e7b8"></a>
@@ -1336,8 +1324,7 @@ Variables</h2></td></tr>
 <li>BCCONFIGREADERROR indicates an error reading the configuration file </li>
 </ul>
 </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a26">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a27">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a73">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaa1c32480aaf288a615cc7330e9cb6072"></a>
@@ -1355,8 +1342,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a19">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a28">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a74">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gae79420e415eafcf286a5f045194271d1"></a>
@@ -1374,8 +1360,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a6">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a29">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf890f66e1e86cf2e43aafd221eddabbd"></a>
@@ -1393,8 +1378,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a39">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a30">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a75">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gadab6d320323ece6f7627cb9bb04d0eb9"></a>
@@ -1412,8 +1396,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a40">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a31">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a76">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga10d59c21de300f9eae88f1b90ef845f2"></a>
@@ -1431,8 +1414,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a44">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a32">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a77">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga079ffb055db3bcccb6afd6d58775a361"></a>
@@ -1450,8 +1432,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a64">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a33">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a78">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga5d4f3ffe466c37b8b1796559562913cc"></a>
@@ -1469,8 +1450,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a66">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a34">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a79">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga88fb6383c5c934e876be013729f8ab60"></a>
@@ -1488,8 +1468,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a68">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a35">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a80">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga0eaf55c523b081609cd85dd6eb04682b"></a>
@@ -1507,8 +1486,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a33">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a36">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a81">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf51f6974fd24b1975646db3636c479f8"></a>
@@ -1526,8 +1504,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a70">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a37">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a82">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf8b73dc85a9b8da6978eac659ec8531b"></a>
@@ -1545,8 +1522,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a34">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a38">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a83">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga84b0f0a6d9c4b56b743eb5b171f3172c"></a>
@@ -1564,8 +1540,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a73">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a39">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a84">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga5366f78d45883b7ad5934d6910efa6c5"></a>
@@ -1583,8 +1558,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a17">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a40">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a85">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf31e21e2ff935496c7ce8dc5e52b65c3"></a>
@@ -1618,8 +1592,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a16">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a41">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a86">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gad5286e2927749d97bf22eaf1173fccdd"></a>
@@ -1637,8 +1610,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a74">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a42">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga7f92f656ab477dd3291c283949629ea7"></a>
@@ -1666,8 +1638,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a62">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a43">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga9e3db1d6a78924426ef881d1e3303220"></a>
@@ -1695,8 +1666,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a63">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a44">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga093f472d65a4478a2a23fa69ea593ef0"></a>
@@ -1714,8 +1684,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a76">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a45">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a102">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf1aef5309c25647017f7108bc58873f7"></a>
@@ -1733,8 +1702,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a77">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a46">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a103">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga450d4faa9f19206a09ccd2e461eff601"></a>
@@ -1752,8 +1720,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a78">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a47">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a104">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga7e696bce041fca9cc1924bcd65cbc503"></a>
@@ -1771,8 +1738,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a79">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a48">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a105">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga94bb341ea8ea68eb26f43e8664513609"></a>
@@ -1790,8 +1756,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a80">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a49">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a106">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gac266e79779ea42b506b577821d4a834d"></a>
@@ -1809,8 +1774,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a85">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a50">roc2.h</a>, and <a class="el" href="zephyr_8h-example.html#a107">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga27c5d4df2dd392e1ef8d20cd90998c26"></a>
@@ -1844,8 +1808,43 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a86">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a51">roc2.h</a>.</dd>
-</dl>
+
+</div>
+</div>
+<a id="ga6d349127ea334bb59b922c6526491064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6d349127ea334bb59b922c6526491064">&#9670;&nbsp;</a></span>LogEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LogEntry </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>entry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gadcbedaa818106b214fa28e4cec06fc2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadcbedaa818106b214fa28e4cec06fc2f">&#9670;&nbsp;</a></span>SetRocTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SetRocTime </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>rmc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -1862,8 +1861,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>List of valid command line options. A : indicates parameter required for that option. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a36">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a0">roc2.h</a>, and <a class="el" href="zephyr_8c-example.html#a95">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga7aefac4844eee045f0c4b8279efc7bb8"></a>
@@ -1879,8 +1877,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Full path to ROC configuration file. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a28">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a1">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga6488e90355e8906ca5274fcfd451ffd3"></a>
@@ -1896,8 +1893,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer to structure holding data from config file. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a27">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a2">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga2139244053072412f44be9b73e45e838"></a>
@@ -1913,8 +1909,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Full path to GPS configuration file. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a61">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a3">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga7aa4bbc7d3acca779d0bc8d55542e77e"></a>
@@ -1930,8 +1925,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer to structure holding data from config file. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a60">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a4">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gad68a72f177ed1f87cf7cc8325069d9a0"></a>
@@ -1945,8 +1939,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8h-example.html#a5">roc2.h</a>, and <a class="el" href="zephyr_8c-example.html#a91">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga7ae3c951fb9113513e6ceaafe61564b2"></a>
@@ -1962,8 +1955,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer to a setting used by libconfig. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a50">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a6">roc2.h</a>, and <a class="el" href="zephyr_8c-example.html#a108">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf3e7ebf92f13594acf3ba281bcfd1c0b"></a>
@@ -1979,8 +1971,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>hard coded for now, move to config file </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a75">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a7">roc2.h</a>, and <a class="el" href="zephyr_8c-example.html#a81">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gacf09df540c710aea6e3e39d4c149f119"></a>
@@ -1994,8 +1985,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a65">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a8">roc2.h</a>, and <a class="el" href="zephyr_8c-example.html#a121">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga17c8b16a620d8fa68aa30017abe96c50"></a>
@@ -2009,8 +1999,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a67">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a9">roc2.h</a>, and <a class="el" href="zephyr_8c-example.html#a123">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga6195294dffffff6b11f3b629568b055e"></a>
@@ -2024,8 +2013,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a71">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a10">roc2.h</a>, and <a class="el" href="zephyr_8c-example.html#a128">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga0b2caeb4b6f130be43e5a2f0267dd453"></a>
@@ -2041,8 +2029,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Print diagnostic messages to stdout. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a7">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a11">roc2.h</a>, and <a class="el" href="zephyr_8c-example.html#a23">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga2896431d6a80cd39b3d24b40237612ee"></a>
@@ -2058,8 +2045,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Tells the main loop when to exit. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a12">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a12">roc2.h</a>, and <a class="el" href="zephyr_8c-example.html#a14">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga40c07165efeb9ce3aff7ce4c4d02af26"></a>
@@ -2075,8 +2061,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Length of data files (seconds) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a14">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a13">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga12878be4d584d4841c7d409b8f024644"></a>
@@ -2092,8 +2077,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Top level directory for logged data files. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a23">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a14">roc2.h</a>, and <a class="el" href="zephyr_8c-example.html#a94">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaa065f30aa9f5f9a42132c82c787ee70b"></a>
@@ -2109,8 +2093,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer to open data file. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a15">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a15">roc2.h</a>, and <a class="el" href="zephyr_8c-example.html#a131">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga576d1db2a3cf8ffa97ba33bbb1420592"></a>
@@ -2126,8 +2109,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer to named pipe for communicating with Zephyr process. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8h-example.html#a16">roc2.h</a>, and <a class="el" href="zephyr_8c-example.html#a92">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gab923c64de6e92e1b6a8efb77999e242e"></a>
@@ -2143,8 +2125,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stores the name of the current data file. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a24">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a17">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga7efc4b1ce527042655fec03571c9042f"></a>
@@ -2160,8 +2141,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stores the time when a new data files should be started. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a13">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a18">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga133013525fac7907e0baa31ec30f8b4b"></a>
@@ -2177,8 +2157,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stores current time. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a35">roc2.c</a>, <a class="el" href="roc2_8h-example.html#a19">roc2.h</a>, and <a class="el" href="zephyr_8c-example.html#a120">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga74b83d1a2e086188b8e87ca651f3a610"></a>
@@ -2194,8 +2173,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Serial device name. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a21">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a93">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga218b4f7c6cc2681a99c23a3b089d68b1"></a>
@@ -2211,8 +2189,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Serial baud rate. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a18">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a97">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gad1e28a1a66a25529b0b61b9ca4e66d44"></a>
@@ -2228,8 +2205,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Bits per character (7 or 8) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a41">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a100">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gad14da60f9217c7f12ee2224d23872b45"></a>
@@ -2245,8 +2221,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Parity bit ('N', 'O', or 'E') </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a42">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a101">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga6c0af9f2e97842405fb15ed952ef2976"></a>
@@ -2262,8 +2237,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Number of stop bits (1 or 2) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a43">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a102">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga0987f44fb6e6bc92483048e54ccd19da"></a>
@@ -2279,8 +2253,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Flow control ('N', 'H', or 'S') </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a45">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a104">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga29c6cbcf2159ec289aa7742b1e99b316"></a>
@@ -2296,8 +2269,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Line terminator. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a9">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a12">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga5c82fa58c263d40b70b737c5efa07ef0"></a>
@@ -2313,8 +2285,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>File descriptor for open serial port. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a11">roc2.c</a>, and <a class="el" href="zephyr_8c-example.html#a13">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga92807ba34a45f6a37e21653d665b7e18"></a>
@@ -2328,8 +2299,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a8">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a21">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gae287744d86d503c3f6388d2761440021"></a>
@@ -2343,8 +2313,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="roc2_8c-example.html#a10">roc2.c</a>, and <a class="el" href="roc2_8h-example.html#a22">roc2.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 </div><!-- contents -->
