@@ -2,33 +2,23 @@
 /**
  * @defgroup   roc2_header roc2.h
  *
- * @brief header file for the initial ROC2 data collection software
+ * @brief Header file for the initial ROC2 data collection software
  */
 
 /**
  * @defgroup   roc2_code roc2.c
  *
- * @brief  Data collection software for the ROC2 Radio Occultation Instrument. It performs the following:
- *	
- * - Reads configuration file to determine commands for setting up GPS receiver
- * - Configures GPS receiver
- * - Launch data offload program
- * - Logs data received from GPS receiver to files
- * - When data file is closed, calls data processing script and open new file
+ * @brief  Data collection software for the ROC2 Radio Occultation Instrument.
  */
 
 /**
  * @defgroup   zephyr_header zephyr.h
  *
- * @brief header file for the initial ROC2 Zephyr interface module
+ * @brief Header file for the initial ROC2 Zephyr interface module
  */
 
 /**
  * @defgroup   zephyr_code zephyr.c
  *
- * @brief Data collection software for the ROC2 Radio Occultation Instrument. It performs the following:
- * 
- * - Communicate with Zephyr Instrument: Respond to mode changes and controls GPS Low Power State
- * - Transmits Data to Zephyr Instrument: Read Files from Queue folder, Send Data and Delete Files from Queue
- * - Handle Telecommands: Receive TC Data packs, Perform TC action and echo results back to Zephyr Instrument
+ * @brief Data collection software for the ROC2 Radio Occultation Instrument.
  */

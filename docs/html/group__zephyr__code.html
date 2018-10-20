@@ -78,12 +78,7 @@ $(document).ready(function(){initNavTree('group__zephyr__code.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
-<p>Data collection software for the ROC2 Radio Occultation Instrument. It performs the following: </p>
-<ul>
-<li>Communicate with Zephyr Instrument: Respond to mode changes and controls GPS Low Power State</li>
-<li>Transmits Data to Zephyr Instrument: Read Files from Queue folder, Send Data and Delete Files from Queue</li>
-<li>Handle Telecommands: Receive TC Data packs, Perform TC action and echo results back to Zephyr Instrument </li>
-</ul>
+<p>Data collection software for the ROC2 Radio Occultation Instrument. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -106,7 +101,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga405decabf57ea3d65a9fea453e4a2fa3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr__code.html#ga405decabf57ea3d65a9fea453e4a2fa3">HandleTMAck</a> (char *msgdata)</td></tr>
 <tr class="separator:ga405decabf57ea3d65a9fea453e4a2fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga24fd4d56749147dbdfbb5817276010a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr__code.html#ga24fd4d56749147dbdfbb5817276010a8">HandleTC</a> (char *msgdata)</td></tr>
-<tr class="memdesc:ga24fd4d56749147dbdfbb5817276010a8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__zephyr__code.html#ga24fd4d56749147dbdfbb5817276010a8" title="HandleTC() reads the TC commands and returns a terminal echo of the response. ">HandleTC()</a> reads the TC commands and returns a terminal echo of the response.  <a href="#ga24fd4d56749147dbdfbb5817276010a8">More...</a><br /></td></tr>
 <tr class="separator:ga24fd4d56749147dbdfbb5817276010a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6f9ac83f838130b9d2723d02ae37562e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr__code.html#ga6f9ac83f838130b9d2723d02ae37562e">HandleGPS</a> (char *msgdata)</td></tr>
 <tr class="separator:ga6f9ac83f838130b9d2723d02ae37562e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,6 +175,10 @@ Functions</h2></td></tr>
 <tr class="separator:ga94bb341ea8ea68eb26f43e8664513609"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac266e79779ea42b506b577821d4a834d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr__code.html#gac266e79779ea42b506b577821d4a834d">set_gpio0</a> (int state)</td></tr>
 <tr class="separator:gac266e79779ea42b506b577821d4a834d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa1cb11518d8f0e2196049b13a6079eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr__code.html#gaaa1cb11518d8f0e2196049b13a6079eb">LogEntry</a> (const char *entry)</td></tr>
+<tr class="separator:gaaa1cb11518d8f0e2196049b13a6079eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga381a88bb9e2d53eb11289d6aa6f486d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr__code.html#ga381a88bb9e2d53eb11289d6aa6f486d8">CalcFileLen</a> (char *thisFile, char *lastFile)</td></tr>
+<tr class="separator:ga381a88bb9e2d53eb11289d6aa6f486d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga777ab160b5ad985f2ccc1a878e5936fd"></a>
@@ -349,22 +347,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p><a class="el" href="group__zephyr__code.html#ga24fd4d56749147dbdfbb5817276010a8" title="HandleTC() reads the TC commands and returns a terminal echo of the response. ">HandleTC()</a> reads the TC commands and returns a terminal echo of the response. </p>
-<ol type="1">
-<li>To carry out a telecommand (TC), user types in the linux command in 'cmd' under /root/LV/TC_Files. Note: Only one file can exist here at a time</li>
-<li>Zephyr wraps cmd in standard XML format and sends to ROC</li>
-<li><a class="el" href="group__zephyr__code.html#ga24fd4d56749147dbdfbb5817276010a8" title="HandleTC() reads the TC commands and returns a terminal echo of the response. ">HandleTC()</a> decipher XML format and reads the linux command</li>
-<li><a class="el" href="group__zephyr__code.html#ga24fd4d56749147dbdfbb5817276010a8" title="HandleTC() reads the TC commands and returns a terminal echo of the response. ">HandleTC()</a> compares the command to the list and executes it</li>
-<li><a class="el" href="group__zephyr__code.html#ga24fd4d56749147dbdfbb5817276010a8" title="HandleTC() reads the TC commands and returns a terminal echo of the response. ">HandleTC()</a> copies linux terminal output to file under /queue, which is automatically sent back to Zephyr Module</li>
-</ol>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">*msgdata</td><td>pointer to the zephyr TC instructions </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on error </dd></dl>
+<p>feeding payload directly to system() </p>
 
 </div>
 </div>
@@ -920,6 +903,7 @@ Functions</h2></td></tr>
 <p>&lt; always sending ACK for now, change later</p>
 <p>&lt; Tells Zephyr we're in Safety mode now, ok to shut off power</p>
 <p>&lt; Telemetry message. This is how we send data to Zephyr</p>
+<p>Instrument Mode in housekeeping packet header. 0=FL,1=SB,2=LP,3=SA,4=EF</p>
 <p>&lt; Tells Zephyr we got the telecommand message (uplink data)</p>
 <p>&lt; always sending ACK for now, change later </p>
 
@@ -1135,6 +1119,52 @@ Functions</h2></td></tr>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>state</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaaa1cb11518d8f0e2196049b13a6079eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa1cb11518d8f0e2196049b13a6079eb">&#9670;&nbsp;</a></span>LogEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LogEntry </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>entry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga381a88bb9e2d53eb11289d6aa6f486d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga381a88bb9e2d53eb11289d6aa6f486d8">&#9670;&nbsp;</a></span>CalcFileLen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CalcFileLen </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>thisFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>lastFile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

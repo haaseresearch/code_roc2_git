@@ -1,22 +1,17 @@
 var NAVTREE =
 [
   [ "Strateole 2 Project", "index.html", [
-    [ "Manual", "manual.html", [
-      [ "Startup Summary", "startup.html", null ],
-      [ "Making Serial Connection", "serial.html", null ],
-      [ "Making Ethernet Connection", "ethernet.html", null ],
-      [ "Making WIFI Connection", "wifi.html", null ]
-    ] ],
+    [ "Manual", "manual.html", null ],
     [ "Source Code", "modules.html", "modules" ],
     [ "GitHub", "^https://github.com/haaseresearch/code_roc2_git", null ],
-    [ "Issue Tracker", "^https://github.com/haaseresearch/code_roc2_git/issues", null ]
+    [ "Releases", "^https://github.com/haaseresearch/code_roc2_git/releases", null ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"ethernet.html",
-"group__zephyr__header.html#ga5d4e9da7ecf27d35f3194989053adee0"
+"group__roc2__code.html",
+"group__zephyr__header.html#ga45786db9b46a6cc20e64bd0a851655bc"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
