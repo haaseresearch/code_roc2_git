@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Strateole 2 Project: .h zephyr_header</title>
+<title>Strateole 2 Project: .c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,11 +77,10 @@ $(document).ready(function(){initNavTree('group__zephyr.html','');});
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">.h zephyr_header</div>  </div>
+<div class="title">.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
-<p>This program is the first version of data collection software for the ROC2 Radio Occultation Instrument. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -96,10 +95,10 @@ Macros</h2></td></tr>
 <tr class="memitem:ga39c375768ddcc0625a1557e78d08c6e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#ga39c375768ddcc0625a1557e78d08c6e8">INSTID</a>&#160;&#160;&#160;&quot;ROC&quot;</td></tr>
 <tr class="memdesc:ga39c375768ddcc0625a1557e78d08c6e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instrument ID string in message headers.  <a href="#ga39c375768ddcc0625a1557e78d08c6e8">More...</a><br /></td></tr>
 <tr class="separator:ga39c375768ddcc0625a1557e78d08c6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8e5d9993745ca60b1777be3b1fa57a53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#ga8e5d9993745ca60b1777be3b1fa57a53">SWDate</a>&#160;&#160;&#160;&quot;20180725,2231&quot;</td></tr>
+<tr class="memitem:ga8e5d9993745ca60b1777be3b1fa57a53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#ga8e5d9993745ca60b1777be3b1fa57a53">SWDate</a>&#160;&#160;&#160;&quot;20180917,1053&quot;</td></tr>
 <tr class="memdesc:ga8e5d9993745ca60b1777be3b1fa57a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build date and time.  <a href="#ga8e5d9993745ca60b1777be3b1fa57a53">More...</a><br /></td></tr>
 <tr class="separator:ga8e5d9993745ca60b1777be3b1fa57a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad6f212287232c8a7d12dbc0e5901635d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#gad6f212287232c8a7d12dbc0e5901635d">SWVersion</a>&#160;&#160;&#160;&quot;027&quot;</td></tr>
+<tr class="memitem:gad6f212287232c8a7d12dbc0e5901635d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#gad6f212287232c8a7d12dbc0e5901635d">SWVersion</a>&#160;&#160;&#160;&quot;033&quot;</td></tr>
 <tr class="memdesc:gad6f212287232c8a7d12dbc0e5901635d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Software version number.  <a href="#gad6f212287232c8a7d12dbc0e5901635d">More...</a><br /></td></tr>
 <tr class="separator:gad6f212287232c8a7d12dbc0e5901635d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad70863efc178e87c7ea48699a141771b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#gad70863efc178e87c7ea48699a141771b">ZephVersion</a>&#160;&#160;&#160;&quot;100&quot;</td></tr>
@@ -131,6 +130,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gaa735592f7579934ca442d9a338588b90"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#gaa735592f7579934ca442d9a338588b90">GPIO_PATH</a>&#160;&#160;&#160;&quot;/opt/roc/gpio&quot;</td></tr>
 <tr class="memdesc:gaa735592f7579934ca442d9a338588b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full path to script that controls digital IO.  <a href="#gaa735592f7579934ca442d9a338588b90">More...</a><br /></td></tr>
 <tr class="separator:gaa735592f7579934ca442d9a338588b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b1da0cb514f35f2dad5f19754377274"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#ga2b1da0cb514f35f2dad5f19754377274">DEBUG_OUTPUT</a>&#160;&#160;&#160;&quot;/data/roc/logs/&quot;</td></tr>
+<tr class="memdesc:ga2b1da0cb514f35f2dad5f19754377274"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default location to store debug logs.  <a href="#ga2b1da0cb514f35f2dad5f19754377274">More...</a><br /></td></tr>
+<tr class="separator:ga2b1da0cb514f35f2dad5f19754377274"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga13011473aa992ebdbad6b99830b54d56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#ga13011473aa992ebdbad6b99830b54d56">BAUD_DEFAULT</a>&#160;&#160;&#160;115200</td></tr>
 <tr class="memdesc:ga13011473aa992ebdbad6b99830b54d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default serial port baud rate.  <a href="#ga13011473aa992ebdbad6b99830b54d56">More...</a><br /></td></tr>
 <tr class="separator:ga13011473aa992ebdbad6b99830b54d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,7 +264,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga405decabf57ea3d65a9fea453e4a2fa3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#ga405decabf57ea3d65a9fea453e4a2fa3">HandleTMAck</a> (char *msgdata)</td></tr>
 <tr class="separator:ga405decabf57ea3d65a9fea453e4a2fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga24fd4d56749147dbdfbb5817276010a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#ga24fd4d56749147dbdfbb5817276010a8">HandleTC</a> (char *msgdata)</td></tr>
-<tr class="memdesc:ga24fd4d56749147dbdfbb5817276010a8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__zephyr.html#ga24fd4d56749147dbdfbb5817276010a8" title="HandleTC() reads the TC commands and returns a terminal echo of the response. ">HandleTC()</a> reads the TC commands and returns a terminal echo of the response.  <a href="#ga24fd4d56749147dbdfbb5817276010a8">More...</a><br /></td></tr>
 <tr class="separator:ga24fd4d56749147dbdfbb5817276010a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6f9ac83f838130b9d2723d02ae37562e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#ga6f9ac83f838130b9d2723d02ae37562e">HandleGPS</a> (char *msgdata)</td></tr>
 <tr class="separator:ga6f9ac83f838130b9d2723d02ae37562e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -337,6 +338,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga94bb341ea8ea68eb26f43e8664513609"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac266e79779ea42b506b577821d4a834d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#gac266e79779ea42b506b577821d4a834d">set_gpio0</a> (int state)</td></tr>
 <tr class="separator:gac266e79779ea42b506b577821d4a834d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa1cb11518d8f0e2196049b13a6079eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#gaaa1cb11518d8f0e2196049b13a6079eb">LogEntry</a> (const char *entry)</td></tr>
+<tr class="separator:gaaa1cb11518d8f0e2196049b13a6079eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -472,6 +475,8 @@ Variables</h2></td></tr>
 <tr class="memitem:ga5fbc376cbc0c53ee6f214ee2c5e18f33"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#ga5fbc376cbc0c53ee6f214ee2c5e18f33">crc_msg</a></td></tr>
 <tr class="memdesc:ga5fbc376cbc0c53ee6f214ee2c5e18f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC value from message.  <a href="#ga5fbc376cbc0c53ee6f214ee2c5e18f33">More...</a><br /></td></tr>
 <tr class="separator:ga5fbc376cbc0c53ee6f214ee2c5e18f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6f024d5924f8ecf7500cedfab2c0606"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#gae6f024d5924f8ecf7500cedfab2c0606">msg</a> [255]</td></tr>
+<tr class="separator:gae6f024d5924f8ecf7500cedfab2c0606"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga08278f93e910f4f4d419ef15c7eefea1"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#ga08278f93e910f4f4d419ef15c7eefea1">todaysDirectoryName</a> [10]</td></tr>
 <tr class="separator:ga08278f93e910f4f4d419ef15c7eefea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga17c8b16a620d8fa68aa30017abe96c50"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__zephyr.html#ga17c8b16a620d8fa68aa30017abe96c50">todaysDirectoryPath</a> [100]</td></tr>
@@ -496,8 +501,7 @@ Variables</h2></td></tr>
 
 <p>Main function. </p>
 <p>Calls <a class="el" href="group__zephyr.html#ga26a5cd9326852a6f3a89225c8642479b" title="Performs module initialization. ">ZephyrInit()</a> to perform initialization then enters the main while loop where it .... the main loop stops, then <a class="el" href="group__zephyr.html#ga40809263d9e34d3d93cdb0eed73db857" title="Closes sockets and frees memory. ">ZephyrCleanup()</a> is called before exiting. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a27">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga39c375768ddcc0625a1557e78d08c6e8"></a>
@@ -513,8 +517,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Instrument ID string in message headers. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a138">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga8e5d9993745ca60b1777be3b1fa57a53"></a>
@@ -524,7 +527,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SWDate&#160;&#160;&#160;&quot;20180725,2231&quot;</td>
+          <td class="memname">#define SWDate&#160;&#160;&#160;&quot;20180917,1053&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -540,7 +543,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SWVersion&#160;&#160;&#160;&quot;027&quot;</td>
+          <td class="memname">#define SWVersion&#160;&#160;&#160;&quot;033&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -562,8 +565,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Zephyr protocol version. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a139">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaaf06a3762adb0aa04b8a5f8f016ca5e9"></a>
@@ -579,8 +581,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Maximum size of TM packet payload. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a136">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga3b02c8218b4fda72755b780d51977c38"></a>
@@ -594,8 +595,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a18">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga052dadad9560c0874f9dfeedae0ccb3b"></a>
@@ -609,8 +609,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a22">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaa8cecfc5c5c054d2875c03e77b7be15d"></a>
@@ -738,8 +737,23 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Full path to script that controls digital IO. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a146">zephyr.c</a>.</dd>
-</dl>
+
+</div>
+</div>
+<a id="ga2b1da0cb514f35f2dad5f19754377274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b1da0cb514f35f2dad5f19754377274">&#9670;&nbsp;</a></span>DEBUG_OUTPUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBUG_OUTPUT&#160;&#160;&#160;&quot;/data/roc/logs/&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default location to store debug logs. </p>
+
 </div>
 </div>
 <a id="ga13011473aa992ebdbad6b99830b54d56"></a>
@@ -819,8 +833,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Size of incoming serial buffer. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a1">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a61">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaabdc4459494ea67b62bc0bc8dd9a30ab"></a>
@@ -836,8 +849,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Size of outgoing serial buffer. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a63">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga5d4e9da7ecf27d35f3194989053adee0"></a>
@@ -869,8 +881,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Version number of interface board. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a111">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga7f970a76fd7cbf3dd6143df7262bbccc"></a>
@@ -884,8 +895,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a53">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gae1fcb66a99d5c37f2935facbd0925ca0"></a>
@@ -899,8 +909,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a50">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga416de92c0d71270e5d9eb87ba5853e39"></a>
@@ -1464,8 +1473,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a0">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga4420395a38828d6be4aae8646268d258"></a>
@@ -1493,8 +1501,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a62">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a95">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gac8252c63f3bdc239fbdf6fbd93d40c76"></a>
@@ -1517,8 +1524,7 @@ Variables</h2></td></tr>
 <p>&lt; Switch to Low Power mode</p>
 <p>&lt; Switch to Safety mode</p>
 <p>&lt; Switch to End Flight mode </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a67">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a96">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gac5b4e6f9b660a68301b5cd686040e61a"></a>
@@ -1536,8 +1542,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a69">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a97">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga81340cc09bb1fbb59c968fa3d3b41064"></a>
@@ -1555,8 +1560,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a71">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a98">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga405decabf57ea3d65a9fea453e4a2fa3"></a>
@@ -1574,8 +1578,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a73">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a99">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga24fd4d56749147dbdfbb5817276010a8"></a>
@@ -1593,24 +1596,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>feeding payload directly to system() </p>
 
-<p><a class="el" href="group__zephyr.html#ga24fd4d56749147dbdfbb5817276010a8" title="HandleTC() reads the TC commands and returns a terminal echo of the response. ">HandleTC()</a> reads the TC commands and returns a terminal echo of the response. </p>
-<ol type="1">
-<li>To carry out a telecommand (TC), user types in the linux command in 'cmd' under /root/LV/TC_Files. Note: Only one file can exist here at a time</li>
-<li>Zephyr wraps cmd in standard XML format and sends to ROC</li>
-<li><a class="el" href="group__zephyr.html#ga24fd4d56749147dbdfbb5817276010a8" title="HandleTC() reads the TC commands and returns a terminal echo of the response. ">HandleTC()</a> decipher XML format and reads the linux command</li>
-<li><a class="el" href="group__zephyr.html#ga24fd4d56749147dbdfbb5817276010a8" title="HandleTC() reads the TC commands and returns a terminal echo of the response. ">HandleTC()</a> compares the command to the list and executes it</li>
-<li><a class="el" href="group__zephyr.html#ga24fd4d56749147dbdfbb5817276010a8" title="HandleTC() reads the TC commands and returns a terminal echo of the response. ">HandleTC()</a> copies linux terminal output to file under /queue, which is automatically sent back to Zephyr Module</li>
-</ol>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">*msgdata</td><td>pointer to the zephyr TC file containing TC instructions </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on error </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a75">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a100">zephyr.h</a>.</dd>
-</dl>
 </div>
 </div>
 <a id="ga6f9ac83f838130b9d2723d02ae37562e"></a>
@@ -1628,8 +1615,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a77">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a101">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga26a5cd9326852a6f3a89225c8642479b"></a>
@@ -1676,8 +1662,7 @@ Variables</h2></td></tr>
 <li>BCZMQBINDERROR indicates an error binding the ZMQ REP socket. </li>
 </ul>
 </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a2">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a69">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga40809263d9e34d3d93cdb0eed73db857"></a>
@@ -1699,8 +1684,7 @@ Variables</h2></td></tr>
 <p>Closes sockets and frees memory. </p>
 <p>There will be some serial port clean up stuff in here.</p>
 <dl class="section return"><dt>Returns</dt><dd>Always returns BCSUCCESS </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a64">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a70">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga5dbf303fd2c465b1e724a247623fdbd2"></a>
@@ -1742,8 +1726,7 @@ Variables</h2></td></tr>
 <li>BCERROR if there was an error parsing any of the command line options </li>
 </ul>
 </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a86">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga40185ea52d16cecaafae70740e90af29"></a>
@@ -1763,8 +1746,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Prints the usage summary showing valid command line options. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a87">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga8ed0e63e6cf78544f92b023037e3e7b8"></a>
@@ -1809,8 +1791,7 @@ Variables</h2></td></tr>
 <li>BCCONFIGREADERROR indicates an error reading the configuration file </li>
 </ul>
 </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a82">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga919ac26442368faff61c89f0f62fd58b"></a>
@@ -1828,8 +1809,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a89">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf890f66e1e86cf2e43aafd221eddabbd"></a>
@@ -1847,8 +1827,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a98">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gadab6d320323ece6f7627cb9bb04d0eb9"></a>
@@ -1866,8 +1845,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a99">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga10d59c21de300f9eae88f1b90ef845f2"></a>
@@ -1885,8 +1863,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a103">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga0bacb9e2137b9572d5f02c23de2ad813"></a>
@@ -1904,8 +1881,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a119">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga29819f4927e98849304e948f13c12574"></a>
@@ -1923,8 +1899,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a122">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga88fb6383c5c934e876be013729f8ab60"></a>
@@ -1942,8 +1917,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a124">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga0eaf55c523b081609cd85dd6eb04682b"></a>
@@ -1961,8 +1935,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a126">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga45786db9b46a6cc20e64bd0a851655bc"></a>
@@ -1980,8 +1953,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a127">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf8b73dc85a9b8da6978eac659ec8531b"></a>
@@ -1999,8 +1971,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a129">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga84b0f0a6d9c4b56b743eb5b171f3172c"></a>
@@ -2018,8 +1989,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a132">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga5366f78d45883b7ad5934d6910efa6c5"></a>
@@ -2037,8 +2007,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a133">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf31e21e2ff935496c7ce8dc5e52b65c3"></a>
@@ -2072,8 +2041,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a134">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga4b0ced4940b616430a5cab2b28ba8b61"></a>
@@ -2091,8 +2059,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a36">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a87">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga184ae444081beacfe0bd5b712d378b59"></a>
@@ -2110,8 +2077,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a45">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a88">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf672e15ff453fe857ab4ce7de925f34a"></a>
@@ -2129,8 +2095,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a41">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gabf9cb423a606dc4f8232d1b3394042d5"></a>
@@ -2148,8 +2113,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a54">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a89">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga6e021f179fc712de402af1043ca1a9ef"></a>
@@ -2188,10 +2152,10 @@ Variables</h2></td></tr>
 <p>&lt; always sending ACK for now, change later</p>
 <p>&lt; Tells Zephyr we're in Safety mode now, ok to shut off power</p>
 <p>&lt; Telemetry message. This is how we send data to Zephyr</p>
+<p>Instrument Mode in housekeeping packet header. 0=FL,1=SB,2=LP,3=SA,4=EF</p>
 <p>&lt; Tells Zephyr we got the telecommand message (uplink data)</p>
 <p>&lt; always sending ACK for now, change later </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a48">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a93">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaabe674fb7d630daaebb86607af12308a"></a>
@@ -2219,8 +2183,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a142">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a90">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga626fb8bdfcd2bed45be4fe9fabb74f48"></a>
@@ -2248,8 +2211,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a144">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a91">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaa7865b0822633a51bd794f1922f39711"></a>
@@ -2277,8 +2239,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a141">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a92">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga224d36d32fdd9a46fced3ac36c639169"></a>
@@ -2302,8 +2263,7 @@ Variables</h2></td></tr>
 <p>&lt; Got a TMAck message</p>
 <p>&lt; Got a TC message</p>
 <p>&lt; Got a GPS message </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a61">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a94">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga093f472d65a4478a2a23fa69ea593ef0"></a>
@@ -2321,8 +2281,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a34">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf1aef5309c25647017f7108bc58873f7"></a>
@@ -2340,8 +2299,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a147">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga450d4faa9f19206a09ccd2e461eff601"></a>
@@ -2359,8 +2317,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a148">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga7e696bce041fca9cc1924bcd65cbc503"></a>
@@ -2378,8 +2335,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a30">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga94bb341ea8ea68eb26f43e8664513609"></a>
@@ -2397,8 +2353,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a6">zephyr.c</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gac266e79779ea42b506b577821d4a834d"></a>
@@ -2416,8 +2371,25 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a150">zephyr.c</a>.</dd>
-</dl>
+
+</div>
+</div>
+<a id="gaaa1cb11518d8f0e2196049b13a6079eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa1cb11518d8f0e2196049b13a6079eb">&#9670;&nbsp;</a></span>LogEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LogEntry </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>entry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -2434,8 +2406,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>List of valid command line options. A : indicates parameter required for that option. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a0">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaa33b085cbf737c4c0159e57eb661da0d"></a>
@@ -2451,8 +2422,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Full path to zephyr configuration file. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a84">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a1">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga53b8d16abf4474f0612b85284de2be5d"></a>
@@ -2468,8 +2438,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Directory where telecommand payload files will be stored. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a2">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaac92057dcdbc7740fb0c9166a6002229"></a>
@@ -2485,8 +2454,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer to structure holding data from config file. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a83">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a3">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga7ae3c951fb9113513e6ceaafe61564b2"></a>
@@ -2502,8 +2470,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer to a setting used by libconfig. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a4">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf3e7ebf92f13594acf3ba281bcfd1c0b"></a>
@@ -2519,8 +2486,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>hard coded for now, move to config file </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a5">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gad68a72f177ed1f87cf7cc8325069d9a0"></a>
@@ -2534,8 +2500,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a6">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga0b2caeb4b6f130be43e5a2f0267dd453"></a>
@@ -2551,8 +2516,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Print diagnostic messages to stdout. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a7">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga2896431d6a80cd39b3d24b40237612ee"></a>
@@ -2568,8 +2532,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Tells the main loop when to exit. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a8">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga12878be4d584d4841c7d409b8f024644"></a>
@@ -2585,8 +2548,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Top level directory for logged data files. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a9">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaa065f30aa9f5f9a42132c82c787ee70b"></a>
@@ -2602,8 +2564,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer to open data file. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a10">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga576d1db2a3cf8ffa97ba33bbb1420592"></a>
@@ -2619,8 +2580,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer to named pipe for communicating with ROC process. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a11">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga7efc4b1ce527042655fec03571c9042f"></a>
@@ -2636,8 +2596,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stores the time when a new data files should be started. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a12">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga133013525fac7907e0baa31ec30f8b4b"></a>
@@ -2653,8 +2612,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stores current time. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a13">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf7d4b36cbbc4aa28f3f6c0e455b9b8bb"></a>
@@ -2668,8 +2626,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a3">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a14">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gad4d4536ebc16bcd99fca3934346c8372"></a>
@@ -2685,8 +2642,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>flags that we have sent power command to GPS </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a46">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a15">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gafd6a133642d784682fb4eb4c33ca2bd8"></a>
@@ -2702,8 +2658,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Notifies main loop when instrument mode is changed. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a32">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a16">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga4388415ac8b79e24f68e40759a23651f"></a>
@@ -2719,8 +2674,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Notifies main loop to toggle wake up line. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a33">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a17">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gae7b49ade5fe88e53a5f0dda94ae94b23"></a>
@@ -2736,8 +2690,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Flag that indicates the Safety message has been acknowledged. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a20">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a18">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gad9de7f17717cd6e46d8f5f4e869a4bd1"></a>
@@ -2753,8 +2706,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stores the name of the file being currently offloaded. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a44">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a19">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga9de05a1c8882446cef651d95cb8c03f8"></a>
@@ -2770,8 +2722,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stores the name of the TC file being currently offloaded. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a40">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a20">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaa37266c0efaae4ac2d8a5fbba8341a9e"></a>
@@ -2785,8 +2736,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a43">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a21">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga7d97c19b1f965c9fdcefe9e9c83fe126"></a>
@@ -2802,8 +2752,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stores progress of multi-part data file offload. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a42">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a22">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gad4b9eb4866c26710cf777628af77626e"></a>
@@ -2817,8 +2766,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a39">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a23">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga57408962695c0061aac03bb3a81b9658"></a>
@@ -2834,8 +2782,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Saves Stored progress of multi-part data file offload. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a38">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a24">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gac292f396289364d78037cae452f1aefc"></a>
@@ -2851,8 +2798,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicates we're waiting for acknowledgement from Zephyr. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a15">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a25">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaa37b17e868a3191ab989eeb7dc8cd393"></a>
@@ -2868,8 +2814,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicates we're waiting for acknowledgement from Zephyr. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a16">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a26">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gac380ae62365b5574461d06a4c004d681"></a>
@@ -2885,8 +2830,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Time at which ROC enters Safe mode if it hasn't heard from Zephyr. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a17">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a27">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga52ca9e601c9d0389607ec95f1c49215e"></a>
@@ -2902,8 +2846,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Time interval at which we check the low power state. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a21">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a28">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf8bedab821ee7f36762a64ac71e914a4"></a>
@@ -2919,8 +2862,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Flag to hold off low power check. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a25">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a29">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gad3e6084a9ba20b4a2229e450de4b4cb1"></a>
@@ -2936,8 +2878,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Flag to indicate GPS chars were received. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a24">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a30">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf7f4cea1c772506355074b09428675b7"></a>
@@ -2951,8 +2892,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a28">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a31">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gafe4816e53e5d7a1264d7b0eec60b7eb9"></a>
@@ -2968,8 +2908,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Earliest time that is OK to send the next message (no more than once/sec) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a63">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a32">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga5161d377a61befc3f8103e794d5cb582"></a>
@@ -2985,8 +2924,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicates whether system should shutdown after this process ends. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a58">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a33">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga9ad65e907dc15f9fd37da381332b2f1f"></a>
@@ -3002,8 +2940,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicates whether the last TM message sent contains offload data. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a51">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a34">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gade6c9212e8175f2f26cb4ffa27f6f71c"></a>
@@ -3019,8 +2956,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Flag TC data transfer. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a37">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a35">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga5b3e85b8b041c8b4a422f22faa6f87be"></a>
@@ -3036,8 +2972,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Timer that keeps track of when to send out IMR messages until it gets a response. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a47">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a36">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gafbce215e681be701ae5373fd692dd9ba"></a>
@@ -3053,8 +2988,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Version number of interface board. As of 6/10/18 ROC2.1 and 2.2 have version 2, ROC2.3 has version 3. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a5">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a37">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga677b57bdce5f420b65e52d6eeb0bec5a"></a>
@@ -3068,8 +3002,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a11">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a39">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gabb86b381a046a6c970fefe4d03cf08ad"></a>
@@ -3083,8 +3016,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a78">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a59">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaefaef665bc17d87434d41676ef44c4e7"></a>
@@ -3098,8 +3030,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a60">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaa19539ddd566e3d6135096b9866542c6"></a>
@@ -3115,8 +3046,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>incoming and outgoing serial buffers </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a137">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a62">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="gaf3ded2692c65aa7b6cd16022d020b7c1"></a>
@@ -3130,8 +3060,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a64">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga717734eb6d7a21336b17a04c5051b6dc"></a>
@@ -3147,8 +3076,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Buffer pointers. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a65">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga8d5fb6f3fe9be9941e57854d5c3f2568"></a>
@@ -3164,8 +3092,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>counter that increments with each sent message </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a90">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a66">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga0ec421eee79cdd961d241dd324a226fa"></a>
@@ -3181,8 +3108,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculated CRC value. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a140">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a67">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga5fbc376cbc0c53ee6f214ee2c5e18f33"></a>
@@ -3198,8 +3124,21 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>CRC value from message. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a143">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a68">zephyr.h</a>.</dd>
-</dl>
+
+</div>
+</div>
+<a id="gae6f024d5924f8ecf7500cedfab2c0606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6f024d5924f8ecf7500cedfab2c0606">&#9670;&nbsp;</a></span>msg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char <a class="el" href="group__zephyr.html#ga10a0f35066079abd150539d0d13dbf3e">msg</a>[255]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a id="ga08278f93e910f4f4d419ef15c7eefea1"></a>
@@ -3213,8 +3152,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a108">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga17c8b16a620d8fa68aa30017abe96c50"></a>
@@ -3228,8 +3166,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a109">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga6195294dffffff6b11f3b629568b055e"></a>
@@ -3243,8 +3180,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8h-example.html#a110">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 <a id="ga2dc23420046ef8fdfba8feceb60aa1c0"></a>
@@ -3258,8 +3194,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="zephyr_8c-example.html#a135">zephyr.c</a>, and <a class="el" href="zephyr_8h-example.html#a111">zephyr.h</a>.</dd>
-</dl>
+
 </div>
 </div>
 </div><!-- contents -->

@@ -1,11 +1,11 @@
-TARGETS = roc_led nmbd hostapd samba-ad-dc openbsd-inetd roc_uart roc_gpio smbd roc winbind bluetooth sendsigs urandom rsyslog umountnfs.sh rpcbind nfs-common hwclock.sh networking umountfs umountroot halt reboot
+TARGETS = roc_led openbsd-inetd roc_uart roc_gpio nmbd roc hostapd samba-ad-dc winbind smbd bluetooth sendsigs urandom rsyslog umountnfs.sh rpcbind nfs-common networking hwclock.sh umountfs umountroot halt reboot
 sendsigs: openbsd-inetd nmbd bluetooth hostapd samba-ad-dc smbd winbind
 rsyslog: openbsd-inetd roc_uart roc_gpio bluetooth roc roc_led winbind sendsigs
 umountnfs.sh: openbsd-inetd sendsigs nmbd bluetooth hostapd samba-ad-dc smbd winbind rsyslog
 rpcbind: umountnfs.sh
 nfs-common: umountnfs.sh
-hwclock.sh: nfs-common rsyslog
 networking: umountnfs.sh roc_uart roc_gpio nmbd roc roc_led rpcbind samba-ad-dc smbd winbind
+hwclock.sh: nfs-common rsyslog
 umountfs: umountnfs.sh networking urandom openbsd-inetd roc_uart roc_gpio nmbd bluetooth roc hostapd roc_led rpcbind samba-ad-dc smbd winbind hwclock.sh
 umountroot: umountfs
 halt: umountroot

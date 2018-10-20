@@ -6,12 +6,7 @@
 
     <!-- <tab type="pages" visible="yes" title="Related Pages" intro=""/> -->
 
-    <tab type="usergroup" url="@ref manual" title="Manual">
-      <tab type="user" url="@ref startup" title="Startup Summary"/>
-      <tab type="user" url="@ref serial" title="Making Serial Connection"/>
-      <tab type="user" url="@ref ethernet" title="Making Ethernet Connection"/>
-      <tab type="user" url="@ref wifi" title="Making WIFI Connection"/>
-    </tab>
+    <tab type="usergroup" url="@ref manual" title="Manual"></tab>
 
     <tab type="modules" visible="yes" title="Source Code" intro=""/>
 
@@ -35,7 +30,7 @@
 <!--    <tab type="examples" visible="yes" title="Source Codes" intro=""/> -->
 
     <tab type="user" url="https://github.com/haaseresearch/code_roc2_git" title="GitHub"/>
-    <tab type="user" url="https://github.com/haaseresearch/code_roc2_git/issues" title="Issue Tracker"/>
+    <tab type="user" url="https://github.com/haaseresearch/code_roc2_git/releases" title="Releases"/>
   <!--  <tab type="user" url="https://join.slack.com/t/librobotcontrol/shared_invite/enQtMzk0NjkxNjk0MTE0LTliNjFmMjZiZTQxOWZmNWI3NTJkN2UwOTdjNDk2OWQwMDgxNDEyMDNkMzBkODE5ODZiMWJkYmM1M2UwOTczNmE" title="Slack Discussion"/> -->
 
   </navindex>

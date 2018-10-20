@@ -1,0 +1,13 @@
+smp, ROC23_V01, 00, balloon, V01M, 0, 0, USA
+sop, jhaase@ucsd.edu, SIO_UCSD
+scs,COM3,baud460800,bits8,No,bit1,none
+snt,GPS+GALILEO 
+sso,Stream1,COM3,Meas3Ranges+Meas3Doppler+Meas3CN0HiRes,sec5
+sso,+Stream2,DSK1,Rinex,sec5
+sfn,DSK1,IGS24H
+sem,PVT,15
+sem,Tracking,-10
+scst,ClockSteering
+sfm,SingleAnt
+seth,off
+eccf,Current,Boot
