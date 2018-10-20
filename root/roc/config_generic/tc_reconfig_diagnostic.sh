@@ -1,5 +1,5 @@
 d=`date "+%Y-%m-%d-%H%M%S"`;
-logfile=/data/roc/logs/%${d}_log.txt;
+logfile=/data/roc/logs/${d}_log.txt;
 echo "# Starting reconfig at $d " >> $logfile;
 echo "" >> $logfile;
 

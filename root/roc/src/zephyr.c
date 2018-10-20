@@ -12,9 +12,8 @@
 ///   - Launch data offload program
 ///   - Logs data received from GPS receiver to files
 ///   - When data file is closed, calls data processing script and open new file
-///
 ///	@addtogroup zephyr_code
-///	@{
+/// @{
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -28,6 +27,7 @@
 #include <fcntl.h>
 #include <sys/ioctl.h>
 #include <sys/stat.h>
+#include <sys/statvfs.h>
 #include <poll.h>
 #include <signal.h>
 #include <dirent.h>
@@ -43,12 +43,12 @@
 
 int main (int argc, char *argv[])
 {
-	int err, acked, i, numread, j;
+	int err, acked, i, numread, j, file_len;
 	unsigned char *endptr, *readptr;
 	unsigned char term, readbuf[INBUFSIZE], linebuf[INBUFSIZE/2];
 	struct termios options;
 //	struct timespec curTime;
-	time_t Timer;
+	time_t Timer, fileAlarm;
 	char *nextFile;
 	enum msg InMsgType;
 	char InMsgTypeStr[8];
@@ -83,7 +83,9 @@ int main (int argc, char *argv[])
 	term=zephyr.term[strlen(zephyr.term)-1];
 	readptr=readbuf;
 	memset(readbuf, 0, sizeof(readbuf));
-
+	file_len=0;
+	fileAlarm = time(NULL) + 900;	// Set initial alarm at 15 minutes. Shoud definitely have something in queue by then
+	
 	fds[0].fd = zephyr.fp;
 	fds[0].events = POLLIN;
 
@@ -168,6 +170,17 @@ int main (int argc, char *argv[])
 		
 		switch(InstMode)
 		{
+			case SU:		// Startup mode. Send IMR once per minute until we're put in a different mode
+				if(time(NULL) > nextImr)
+				{
+					if (sendIMRatPower) {
+						if(verbose) printf("%s: Sending IMR message\r\n", MODULE_NAME);
+						SendMsg(IMR, "", 0);
+						waitingIM = WAITFORIM;
+					}
+					nextImr = time(NULL)+60;
+				}
+				break;
 			case FL:		// Flight mode. Check for data files to offload
 		//	    if (verbose) printf("%s: FL Set Safe Output to Low\r\n", MODULE_NAME);
 				sendIMRatPower = 0;
@@ -222,9 +235,27 @@ int main (int argc, char *argv[])
 						TCflag = 0;
 						if(lastPart==numParts)		// we finished the previous file, starting a new one
 						{
+							strcpy(lastFileOffload,fileOffload);		// save previous file name for computing length of files
 							strcpy(fileOffload, nextFile);
+							LogEntry("Starting offoad of file:");
+							LogEntry(fileOffload);
+							file_len = CalcFileLen(fileOffload,lastFileOffload);		// calculate length of data files
+							if(verbose) printf("%s: Calculated file_len = %d\r\n", MODULE_NAME, file_len);
+							fileAlarm = time(NULL) + file_len + 5;		// set expected time of next file (plus 5 seconds of slop, just to avoid race conditions)
 						}
 						SendFile(fileOffload);
+					}
+				}
+				else
+				{
+					if(time(NULL) > fileAlarm)		// We should have seen a new data file by now but we haven't
+					{
+						if(verbose) printf("%s: ALARM! No Data files in queue for more than %d seconds!\r\n",MODULE_NAME, file_len);
+						LogEntry("Queue empty for too long. Sending CRITical error message!");
+						rocAlarm = NOFILEINQUEUE;	// set alarm value to notify SendMsg what the problem is
+						dataTm = 0;
+						SendMsg(TM, "", 0);			// Send TM packet
+						fileAlarm += file_len;		// Snooze alarm until next expected file time
 					}
 				}
 				
@@ -253,7 +284,7 @@ int main (int argc, char *argv[])
 						wakeUpFlag = 0;
 						poweroffgps = 0;
 						}
-					nextImr = time(NULL)+5;
+//					nextImr = time(NULL)+5;
 				}
 		//	    if (verbose) printf("%s: SB Set Safe Output to Low\r\n", MODULE_NAME);
 				switch(hwversion)
@@ -265,15 +296,6 @@ int main (int argc, char *argv[])
 						system("echo \"0\"   > /sys/class/gpio/gpio193/value");			// Set SAFE digital output to lo
 						system("echo \"1\"   > /sys/class/gpio/gpio233/value");			// Set 5V On
 						break;
-				}
-				if(time(NULL) > nextImr)
-				{
-					if (sendIMRatPower) {
-						if(verbose) printf("%s: Sending IMR message\r\n", MODULE_NAME);
-						SendMsg(IMR, "", 0);
-						waitingIM = WAITFORIM;
-					}
-					nextImr = time(NULL)+60;
 				}
 
 				if(time(NULL) > nextTm)
@@ -833,7 +855,7 @@ int ZephyrInit(int argc, char *argv[])
 	
 	poweroffgps = 0;
 	MsgID = 0;
-	InstMode = SB;
+	InstMode = SU;
 	modeSwitch = 0;
 	wakeUpFlag = 0;
 	safeAck = 0;
@@ -848,7 +870,9 @@ int ZephyrInit(int argc, char *argv[])
 	discardFirstFile = 0;
 	clock_gettime(CLOCK_REALTIME, &nextMsgTime);	// OK to send msg at any time
 	nextImr = time(NULL)+5;
-
+	sprintf(fileOffload,"roc_20180101000000.sbf");		// initialize filename
+	rocAlarm = NONE;
+	
 	// Set up named pipe
 	printf("%s: mkfifo returned %d\r\n", MODULE_NAME, mkfifo(ipcPipe, 0666));
 	pipefp = fopen(ipcPipe, "r+");
@@ -1777,11 +1801,13 @@ int RemoveFile(char *name)
 void SendMsg(enum msg msgtype, char *payload, int payload_size)
 {
 	unsigned short cs;
-	int ptr;
+	int ptr, ret;
 	unsigned char byte;
 	struct timespec curTime;
-	char hdr_msg[128];
+	char hdr_msg1[101], hdr_msg2[101], hdr_msg3[101], state1[5], state2[5], state3[5], modestr[3];
 	size_t	wrote;
+	struct statvfs buf;
+	double freespace;
 	
 	clock_gettime(CLOCK_REALTIME, &curTime);
 	while((curTime.tv_sec < nextMsgTime.tv_sec) || ((curTime.tv_sec == nextMsgTime.tv_sec) && (curTime.tv_nsec < nextMsgTime.tv_nsec)))	// Wait until it's ok to send next msg
@@ -1814,18 +1840,74 @@ void SendMsg(enum msg msgtype, char *payload, int payload_size)
 			write(zephyr.fp, outBuf, strlen(outBuf));
 			break;
 		case TM:			///< Telemetry message. This is how we send data to Zephyr
+			sprintf(state1,"");
+			sprintf(state2,"");
+			sprintf(state3,"");
+			sprintf(hdr_msg1,"");
+			sprintf(hdr_msg2,"");
+			sprintf(hdr_msg3,"");
+			switch(InstMode)		/// Instrument Mode in housekeeping packet header. 0=FL,1=SB,2=LP,3=SA,4=EF
+			{
+				case FL:
+					sprintf(modestr,"FL");
+					break;
+				case SB:
+					sprintf(modestr,"SB");
+					break;
+				case LP:
+					sprintf(modestr,"LP");
+					break;
+				case SA:
+					sprintf(modestr,"SA");
+					break;
+				case EF:
+					sprintf(modestr,"EF");
+					break;
+				default:
+					sprintf(modestr,"??");
+					break;
+			}
+			
 			if (TCflag) {
-				sprintf(hdr_msg, "%s,%d,%d",TCfileOffload,TClastPart,TCnumParts);
+				sprintf(hdr_msg1, "%s,%d,%d",TCfileOffload,TClastPart,TCnumParts);
 			}
 			else if(dataTm)		// This message contains a data payload
 			{
-				sprintf(hdr_msg, "%s,%d,%d",fileOffload,lastPart,numParts);
+				sprintf(state1, "FINE");
+				sprintf(hdr_msg1, "%s,%d,%d",fileOffload,lastPart,numParts);
 			}
 			else			// This is just a housekeeping message, no data payload
 			{
-				sprintf(hdr_msg,"%d", InstMode);		/// Instrument Mode in housekeeping packet header. 0=FL,1=SB,2=LP,3=SA,4=EF														
+				sprintf(state1, "FINE");
+				strcpy(hdr_msg1,modestr);
 			}
-			sprintf(outBuf,"<TM>\n\t<Msg>%d</Msg>\n\t<Inst>%s</Inst>\n\t<StateFlag1>FINE</StateFlag1>\n\t<StateMess1>%s</StateMess1>\n\t<Length>%d</Length>\n</TM>\n",MsgID,INSTID,hdr_msg,payload_size);
+
+			freespace = 0.0;
+			ret = statvfs(queueDir, &buf);
+			freespace=(double)buf.f_bfree/(double)buf.f_blocks;
+			if(freespace >= 0.5) sprintf(state2,"FINE");
+			if(freespace < 0.5) sprintf(state2,"WARN");
+			if(freespace < 0.25) sprintf(state2,"CRIT");
+			sprintf(hdr_msg2,"%0.2f",freespace);
+			
+			switch(rocAlarm)
+			{
+				case NONE:
+					sprintf(state3,"FINE");
+					break;
+				case NOFILEINQUEUE:
+					sprintf(state3,"CRIT");
+					break;
+				default:
+					sprintf(state3,"FINE");
+					break;
+			}
+			rocAlarm = NONE;
+			sprintf(hdr_msg3,"%s,%s",SWDate,SWVersion);
+			
+			sprintf(outBuf,"<TM>\n\t<Msg>%d</Msg>\n\t<Inst>%s</Inst>\n\t<StateFlag1>%s</StateFlag1>\n\t<StateMess1>%s</StateMess1>\n\t<StateFlag2>%s</StateFlag2>\n\t<StateMess2>%s</StateMess2>\n\t<StateFlag3>%s</StateFlag3>\n\t<StateMess3>%s</StateMess3>\n\t<Length>%d</Length>\n</TM>\n", \
+				MsgID,INSTID,state1,hdr_msg1,state2,hdr_msg2,state3,hdr_msg3,payload_size);
+
 			crc_calc=ComputeCRC(outBuf,strlen(outBuf));
 			sprintf(outBuf+strlen(outBuf),"<CRC>%d</CRC>\n",crc_calc);
 			sprintf(outBuf+strlen(outBuf),"START");
@@ -2133,4 +2215,39 @@ int LogEntry(const char *entry)
 }
 
 
+int CalcFileLen(char *thisFile,char *lastFile)
+{
+	char *fname;
+	int yr,mon,day,hr,min,sec;
+	int length;
+	struct tm thisTm, lastTm;
+	time_t thisTimeT, lastTimeT;
+	
+	fname = strchr(thisFile, '_');		// search for _ in file name
+	fname+=1;		// skip past _ in file name
+	sscanf(fname,"%4d%2d%2d%2d%2d%2d.sbf",&yr,&mon,&day,&hr,&min,&sec);
+	thisTm.tm_year = yr-1900;
+	thisTm.tm_mon = mon-1;
+	thisTm.tm_mday = day;
+	thisTm.tm_hour = hr;
+	thisTm.tm_min = min;
+	thisTm.tm_sec = sec;
+	thisTimeT = mktime(&thisTm);
+	
+	fname = strchr(lastFile, '_');		// search for _ in file name
+	fname+=1;		// skip past _ in file name
+	sscanf(fname,"%4d%2d%2d%2d%2d%2d.sbf",&yr,&mon,&day,&hr,&min,&sec);
+	lastTm.tm_year = yr-1900;
+	lastTm.tm_mon = mon-1;
+	lastTm.tm_mday = day;
+	lastTm.tm_hour = hr;
+	lastTm.tm_min = min;
+	lastTm.tm_sec = sec;
+	lastTimeT = mktime(&lastTm);
+	
+	length = thisTimeT - lastTimeT;
+	
+	return(length);
+	
+}
 

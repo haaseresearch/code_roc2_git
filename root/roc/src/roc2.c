@@ -13,7 +13,7 @@
 ///   - Logs data received from GPS receiver to files
 ///   - When data file is closed, calls data processing script and open new file
 ///	@addtogroup roc2_code
-///	@{
+/// @{
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -233,9 +233,6 @@ int main (int argc, char *argv[])
 /// - BCSUCCESS if successful.
 /// - BCCONFIGREADERROR indicates an error in LoadConfigFileSettings().
 /// - BCCMDLINEERROR indicates an error in CmdLineHandler().
-/// - BCZMQOPTERROR indicates an error setting the options of a ZMQ socket.
-/// - BCMODLISTERROR indicates an error in PopulateModules().
-/// - BCZMQBINDERROR indicates an error binding the ZMQ REP socket.
 
 int RocInit(int argc, char *argv[])
 {
@@ -1002,32 +999,10 @@ char *LogFileName(char *name)
 
 int OpenLogFile(char *name)
 {
-	int i, index, ret;
+	int i, index, ret, ret2;
 	char *strName;
 	char reply[256];
 
-	sprintf(reply, "");
-	
-	if(SendGpsCmd("enoc, COM4, RMC\r", 1000) != BCSUCCESS)		// timeout occurred while sending GPS command
-	{
-		if(SendGpsCmd("enoc, COM4, RMC\r", 1000) == BCSUCCESS)		// Try one more time
-		{
-			GetGpsReply(reply, 1000);			// 2nd try successful, get repy
-			SetRocTime(reply);					// Set ROC's time based on RMC message
-			LogEntry(reply);
-		}
-		else
-		{
-			LogEntry("Error Sending GPS RMC Message");
-		}
-	}
-	else		// First send was successful, get reply now
-	{
-		GetGpsReply(reply, 1000);
-		SetRocTime(reply);					// Set ROC's time based on RMC message
-		LogEntry(reply);
-	}
-	
 	if(!TodaysDirectoryExists())
 	{
 		if(CreateDayDirectory()) return(BCFILEERROR);
@@ -1061,6 +1036,30 @@ int OpenLogFile(char *name)
 		strcpy(curfilename, strName);
 	}
 
+	sprintf(reply, "");
+			
+	if(ret2 = SendGpsCmd("enoc, COM4, RMC\r\n", 1000))		// timeout occurred while sending GPS command
+	{
+		if(ret2 = SendGpsCmd("enoc, COM4, RMC\r\n", 1000))		// error on 2nd attempt
+		{
+			fprintf(stderr, "%s: Error %d sending RMC command to GPS receiver.\r\n", MODULE_NAME, ret2);
+			LogEntry("Error Sending GPS RMC Message");
+		}
+	}
+	if(ret2 == BCSUCCESS)		// get reply now
+	{
+		if(GetGpsReply(reply, 1000) == -1) 
+		{
+			fprintf(stderr, "%s: Timeout error waiting for GPS reply\r\n", MODULE_NAME);
+			LogEntry(reply);
+		}
+		else
+		{
+			SetRocTime(reply);					// Set ROC's time based on RMC message
+			LogEntry(reply);
+		}
+	}
+	
 	return(ret);
 }
 
@@ -1143,7 +1142,18 @@ int SendGpsCmd(char *cmdstr, int timeout)
 	char inbuf[256];	// needs to be big enough to hold replies from commands
 	double nowtime, endtime;
 	
-/* Get prompt to make sure GPS is ready to receive command.
+	inbuf[0]=0;
+	ptr=0;
+	i=0;
+	ioctl(gps_cmd.fp, FIONREAD, &i);
+	if(i>0)
+	{
+		numread = read(gps_cmd.fp, inbuf+ptr, i);	// clear out anything already in serial buffer and throw it away
+		if(verbose) printf("%s: Cleared %d bytes from buffer\r\n", MODULE_NAME, numread);
+	}
+
+	
+	/* Get prompt to make sure GPS is ready to receive command.
 	Return an error if prompt not received 
 */
 	if(verbose) printf("%s: Sending GPS command %s", MODULE_NAME, cmdstr);
@@ -1158,24 +1168,28 @@ int SendGpsCmd(char *cmdstr, int timeout)
 	ptr=0;
 	i=0;
 	
+	
 	while(!prompt && (nowtime < endtime))		// Wait until prompt (COMx>) is received
 	{
 		ioctl(gps_cmd.fp, FIONREAD, &i);
 		if(i>0)
 		{
-			numread = read(gps_cmd.fp, inbuf+ptr, i);
-			ptr += numread;
-			inbuf[ptr] = 0;
-//			if(strstr(inbuf, "COM") && strstr(inbuf, ">"))
-			if(strstr(inbuf, "COM"))
+			numread = read(gps_cmd.fp, inbuf+ptr, i);	// 	
+			if(numread>0)
 			{
-				prompt = 1;
+				ptr += numread;			// try changing this to += i ??  Or try wrapping it in "if(numread>0) { }"
+				inbuf[ptr] = 0;
+				if(strstr(inbuf, "COM") && strstr(inbuf, ">"))
+//				if(strstr(inbuf, "COM"))
+				{
+					prompt = 1;
+				}
 			}
 		}
 		clock_gettime(CLOCK_MONOTONIC, &spec);
 		nowtime = spec.tv_sec + (spec.tv_nsec / 1000000000);
 	}
-	if(nowtime >= endtime)	
+	if(!prompt)
 	{
 		if(verbose) printf("%s: GPS Send Timeout\r\n", MODULE_NAME);
 		return(-1);		// Timed out without receiving prompt
@@ -1473,7 +1487,7 @@ int SetRocTime(char *rmc)
 		{
 			if(yr==0)			// Didn't parse the date, probably means the CMG field is empty. Try without it
 				read = sscanf(rmc, "$GPRMC,%2d%2d%2d.%d,%c,%f,%c,%f,%c,%f,,%2d%2d%2d,%f,%c,%c",&hr,&min,&sec,&fracsec,&valid,&lat,&latdir,&lon,&londir,&speed,&day,&mon,&yr,&magvar,&magdir,&mode);
-			if(valid=='A')		// Valid GPS fix
+			if((valid=='A') && (yr>17) && (yr<49) && (mon>0) && (mon<13) && (day>0) && (day<32))		// Valid GPS fix
 			{
 				sprintf(cmdstr,"date -u %02d%02d%02d%02d%02d.%02d",mon,day,hr,min,yr,sec);
 				system(cmdstr);

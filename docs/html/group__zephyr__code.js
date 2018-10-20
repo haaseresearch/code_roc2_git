@@ -42,5 +42,6 @@ var group__zephyr__code =
     [ "set_safe", "group__zephyr__code.html#ga7e696bce041fca9cc1924bcd65cbc503", null ],
     [ "led", "group__zephyr__code.html#ga94bb341ea8ea68eb26f43e8664513609", null ],
     [ "set_gpio0", "group__zephyr__code.html#gac266e79779ea42b506b577821d4a834d", null ],
-    [ "LogEntry", "group__zephyr__code.html#gaaa1cb11518d8f0e2196049b13a6079eb", null ]
+    [ "LogEntry", "group__zephyr__code.html#gaaa1cb11518d8f0e2196049b13a6079eb", null ],
+    [ "CalcFileLen", "group__zephyr__code.html#ga381a88bb9e2d53eb11289d6aa6f486d8", null ]
 ];

@@ -2,9 +2,8 @@
 ///
 /// \file zephyr.h
 /// \brief Header file for the initial ROC2 Zephyr interface module.
-///
 ///	@addtogroup zephyr_header
-///	@{
+/// @{
 
 #ifndef __ZEPHYR__
 #define __ZEPHYR__
@@ -12,11 +11,11 @@
 
 // Definitions
 #define INSTID					"ROC"				///< Instrument ID string in message headers
-#define SWDate					"20180917,1053"		///< Build date and time
-#define SWVersion				"033"				///< Software version number
+#define SWDate					"20180921,1152"		///< Build date and time
+#define SWVersion				"037"				///< Software version number
 #define ZephVersion				"100"				///< Zephyr protocol version
-#define MAX_DATA				3800				///< Maximum size of TM packet payload
-#define SAFETIMEOUT				600
+#define MAX_DATA				3700				///< Maximum size of TM packet payload
+#define SAFETIMEOUT				7200
 #define LOWPOWERCHECK			15
 
 #define TRUE					1
@@ -96,6 +95,7 @@ int modeSwitch;			///< Notifies main loop when instrument mode is changed
 int wakeUpFlag;			///< Notifies main loop to toggle wake up line
 int safeAck;			///< Flag that indicates the Safety message has been acknowledged
 char fileOffload[100];		///< Stores the name of the file being currently offloaded
+char lastFileOffload[100];		///< Stores the name of the previously offloaded file
 char TCfileOffload[100];		///< Stores the name of the TC file being currently offloaded
 int numParts, lastPart;	///< Stores progress of multi-part data file offload
 int TCnumParts, TClastPart;	///< Saves Stored progress of multi-part data file offload
@@ -132,7 +132,8 @@ enum mode {
 	SB, 		///< StandBy Mode
 	LP, 		///< Low Power mode
 	SA, 		///< Enter Safety Mode
-	EF			///< End Flight
+	EF,			///< End Flight
+	SU			///< Startup. Not a real instrument mode, used until Zephyr puts us in a real mode
 };
 
 enum msg {
@@ -152,7 +153,17 @@ enum msg {
 	Error		///< Unrecognized message
 };
 
+enum alarm {
+	NONE,				///< No Alarm
+	NOFILEINQUEUE,		///< No Data Files Have Appeared in Queue
+	DISKSPACE,			///< Free Disk Space is Low
+	VOLTAGE				///< Low Supply Voltage
+};
+
+
 enum mode InstMode, LastMode;
+enum alarm rocAlarm;
+
 
 char inBuf[INBUFSIZE], outBuf[OUTBUFSIZE];	///< incoming and outgoing serial buffers
 char *inPtr, *outPtr;						///< Buffer pointers
@@ -202,6 +213,7 @@ void set_safe(int state);
 void led(int state);
 void set_gpio0(int state);
 int LogEntry(const char *entry);
+int CalcFileLen(char *thisFile,char *lastFile);
 
 char todaysDirectoryName[10];
 char todaysDirectoryPath[100];

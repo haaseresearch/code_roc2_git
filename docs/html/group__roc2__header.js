@@ -87,6 +87,7 @@ var group__roc2__header =
     [ "set_gpio0", "group__roc2__header.html#gac266e79779ea42b506b577821d4a834d", null ],
     [ "led_blink", "group__roc2__header.html#ga27c5d4df2dd392e1ef8d20cd90998c26", null ],
     [ "LogEntry", "group__roc2__header.html#ga6d349127ea334bb59b922c6526491064", null ],
+    [ "SetRocTime", "group__roc2__header.html#gadcbedaa818106b214fa28e4cec06fc2f", null ],
     [ "cloptions", "group__roc2__header.html#gac8ac8737a0d1260142bafa03c1f8e566", null ],
     [ "pathCfgRoc", "group__roc2__header.html#ga7aefac4844eee045f0c4b8279efc7bb8", null ],
     [ "cfgRoc", "group__roc2__header.html#ga6488e90355e8906ca5274fcfd451ffd3", null ],

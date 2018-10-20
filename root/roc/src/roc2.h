@@ -2,15 +2,14 @@
 ///
 /// \file roc.h
 /// \brief Header file for the initial ROC2 data collection software.
-///
-///	@addtogroup roc2_header
-///	@{
+///	\addtogroup roc2_header
+/// \{
 
 #ifndef __ROC__
 #define __ROC__
 
-#define SWDate					"20180917,1053"		///< Build date and time
-#define SWVersion				"034"				///< Software version number
+#define SWDate					"20180921,1152"		///< Build date and time
+#define SWVersion				"037"				///< Software version number
 
 // Definitions
 #define TRUE					1
@@ -132,6 +131,7 @@ void led(int state);
 void set_gpio0(int state);
 void led_blink(int color, int num, int duration);
 int LogEntry(char *entry);
+int SetRocTime(char *rmc);
 
 #endif  //  __ROC__
 

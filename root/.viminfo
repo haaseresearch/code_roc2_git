@@ -44,52 +44,40 @@ $
 # Registers:
 "0	LINE	0
 		UPDATE ?= $(shell stty -echo; read -p "Update conf files? " update; stty echo; echo $$update)
-""1	LINE	0
-	startup = "/etc/opt/roc/config_standard_flight.txt"
-"2	LINE	0
-	  gateway 128.46.118.7
-"3	LINE	0
-	
-"4	LINE	0
-	
-"5	LINE	0
-	o
-"6	LINE	0
+"1	LINE	0
 	endif
-"7	LINE	0
+"2	LINE	0
 		echo Not Updating
+"3	LINE	0
+		echo $(UPDATE)
+"4	LINE	0
+	else
+"5	LINE	0
+		echo Updating
+"6	LINE	0
+	ifeq ($(UPDATE),Y)
+"7	LINE	0
+	#UPDATE := $(shell stty -echo; read -p "Update conf files? " update; stty echo; echo $$update) 
 "8	LINE	0
 		echo $(UPDATE)
 "9	LINE	0
-	else
-"-	CHAR	0
+	
+""-	CHAR	0
 	#
 
 # File marks:
-'0  4  0  /etc/opt/roc/gps.conf
-'1  5  50  /etc/opt/roc/gps.conf
-'2  8  2  /etc/network/interfaces
-'3  12  12  ~/roc/config_generic/config_test.txt
-'4  13  0  ~/roc/config_generic/config_test.txt
-'5  11  0  ~/roc/config_generic/config_test.txt
-'6  10  11  /etc/opt/roc/roc.conf
-'7  11  0  /etc/opt/roc/roc.conf
-'8  11  0  ~/roc/makefile
-'9  5  0  ~/roc/scripts_init.d/README.txt
+'0  11  0  ~/roc/makefile
+'1  5  0  ~/roc/scripts_init.d/README.txt
+'2  9  1  ~/roc/makefile
+'3  1  0  ~/roc/makefile
+'4  7  78  ~/roc/makefile
+'5  1  0  ~/roc/make
+'6  9  14  ~/roc/makefile
+'7  9  4  ~/roc/makefile
+'8  9  0  ~/roc/makefile
+'9  8  28  ~/roc/makefile
 
 # Jumplist (newest first):
--'  4  0  /etc/opt/roc/gps.conf
--'  1  0  /etc/opt/roc/gps.conf
--'  5  50  /etc/opt/roc/gps.conf
--'  8  2  /etc/network/interfaces
--'  1  0  /etc/network/interfaces
--'  12  12  ~/roc/config_generic/config_test.txt
--'  1  0  ~/roc/config_generic/config_test.txt
--'  13  0  ~/roc/config_generic/config_test.txt
--'  11  0  ~/roc/config_generic/config_test.txt
--'  10  11  /etc/opt/roc/roc.conf
--'  1  0  /etc/opt/roc/roc.conf
--'  11  0  /etc/opt/roc/roc.conf
 -'  11  0  ~/roc/makefile
 -'  1  0  ~/roc/makefile
 -'  5  0  ~/roc/scripts_init.d/README.txt
@@ -115,6 +103,9 @@ $
 -'  1  0  ~/roc/roc/zephyr.h
 -'  11  24  ~/roc/roc/roc2.h
 -'  1  0  ~/roc/roc/roc2.h
+-'  10  12  /etc/opt/roc/roc.conf
+-'  1  0  /etc/opt/roc/roc.conf
+-'  1  0  /etc/opt/roc/gps.conf
 -'  4  14  /etc/opt/roc/config1.txt
 -'  1  0  /etc/opt/roc/config1.txt
 -'  13  0  /etc/init.d/roc
@@ -150,9 +141,11 @@ $
 -'  51  0  /etc/init.d/roc_gpio
 -'  73  0  /opt/roc/gpio
 -'  7  22  /etc/network/interfaces
+-'  1  0  /etc/network/interfaces
 -'  3  0  /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 -'  1  0  /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 -'  1  0  /etc/wpa_supplicant/wpa_supplicant-wlan0.cof
+-'  4  69  /etc/opt/roc/gps.conf
 -'  4  1  /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 -'  3  1  /etc/wpa_supplicant/wps_supplicant-wlan0.com
 -'  1  0  /etc/wpa_supplicant/wps_supplicant-wlan0.com
@@ -175,49 +168,15 @@ $
 -'  50  73  ~/occult_rev288_2013-04-29/occult/source/GPShandler/getConfiguration.c
 -'  57  72  ~/occult_rev288_2013-04-29/occult/source/GPShandler/getConfiguration.c
 -'  157  65  ~/occult_rev288_2013-04-29/occult/source/GPShandler/coordinate.c
+-'  1  0  ~/occult_rev288_2013-04-29/occult/source/GPShandler/coordinate.c
+-'  146  29  ~/occult_rev288_2013-04-29/occult/source/GPShandler/coordinate.c
+-'  608  14  ~/occult_rev288_2013-04-29/occult/source/GPShandler/coordinate.c
+-'  17  39  ~/occult_rev288_2013-04-29/occult/source/setup.sh
+-'  1  0  ~/occult_rev288_2013-04-29/occult/source/setup.sh
+-'  12  0  ~/occult_rev288_2013-04-29/occult/source/environ.sh
+-'  1  0  ~/occult_rev288_2013-04-29/occult/source/environ.sh
 
 # History of marks within files (newest to oldest):
-
-> /etc/opt/roc/gps.conf
-	"	4	0
-	.	5	0
-	+	4	39
-	+	5	19
-	+	5	0
-	+	4	0
-	+	5	50
-	+	4	0
-	+	5	0
-
-> /etc/network/interfaces
-	"	8	2
-	.	8	0
-	+	13	23
-	+	3	0
-	+	5	0
-	+	10	7
-	+	11	8
-	+	12	21
-	+	7	22
-	+	8	0
-
-> ~/roc/config_generic/config_test.txt
-	"	12	12
-	^	12	13
-	.	12	12
-	+	11	1
-	+	13	0
-	+	11	1
-	+	12	12
-
-> /etc/opt/roc/roc.conf
-	"	10	11
-	^	10	12
-	.	10	11
-	+	4	0
-	+	10	14
-	+	7	18
-	+	10	11
 
 > ~/roc/makefile
 	"	11	0
@@ -364,6 +323,24 @@ $
 	+	10	32
 	+	11	24
 
+> /etc/opt/roc/roc.conf
+	"	10	12
+	^	10	13
+	.	10	12
+	+	4	0
+	+	10	14
+	+	7	18
+	+	10	12
+
+> /etc/opt/roc/gps.conf
+	"	1	0
+	^	4	70
+	.	4	69
+	+	4	39
+	+	5	19
+	+	5	0
+	+	4	69
+
 > /etc/opt/roc/config1.txt
 	"	4	14
 	^	4	15
@@ -460,6 +437,18 @@ $
 	^	4	0
 	.	3	44
 	+	3	44
+
+> /etc/network/interfaces
+	"	7	22
+	^	12	22
+	.	7	22
+	+	13	23
+	+	3	0
+	+	5	0
+	+	10	7
+	+	11	8
+	+	12	21
+	+	7	22
 
 > /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 	"	3	0
